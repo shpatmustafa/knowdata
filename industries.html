@@ -5,10 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Industries | Knowdata Consulting - Sector Expertise</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          container: {
+            center: true,
+            padding: '1rem',
+            screens: {
+              '2xl': '1400px',
+            },
+          },
+        },
+      },
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
+    /* Global container max-width for all pages */
+    .container {
+      max-width: 1400px !important;
+    }
+    
+    @media (min-width: 640px) {
+      .container {
+        max-width: 1400px !important;
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .container {
+        max-width: 1400px !important;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .container {
+        max-width: 1400px !important;
+      }
+    }
+    
+    @media (min-width: 1280px) {
+      .container {
+        max-width: 1400px !important;
+      }
+    }
+    
+    @media (min-width: 1400px) {
+      .container {
+        max-width: 1400px !important;
+      }
+    }
+
     /* Rule 1: Strictly disable horizontal scrolling */
     html, body { 
       overflow-x: hidden; 

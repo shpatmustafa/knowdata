@@ -43,7 +43,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 ul { list-style: none; }
 
 /* --- Container --- */
-.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+.container { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem; }
 
 /* --- Typography --- */
 h1, h2, h3, h4 { line-height: 1.15; }

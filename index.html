@@ -9,12 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
-    /* Rule 1: Strictly disable horizontal scrolling */
     html, body { 
-      overflow-x: hidden !important; 
-      width: 100% !important;
-      max-width: 100vw !important;
-      position: relative;
       font-family: 'Inter', sans-serif; 
       margin: 0;
       padding: 0;
@@ -24,25 +19,10 @@
     * {
       box-sizing: border-box;
     }
-    
-    #site-footer, #site-footer * {
-      max-width: 100% !important;
-      overflow-x: hidden !important;
-    }
-    
-    main, main * {
-      max-width: 100% !important;
-    }
-    
-    section {
-      overflow-x: hidden !important;
-      max-width: 100vw !important;
-      width: 100% !important;
-    }
-    
+
+    /* Global container max-width */
     .container {
-      max-width: 100% !important;
-      overflow-x: hidden !important;
+      max-width: 1400px !important;
     }
 
     /* Standardized Branding Styles - Further reduced for optimal fit */
@@ -114,10 +94,10 @@
   <div id="site-header"></div>
   <script src="js/header.js" data-depth="0"></script>
 
-  <main style="overflow-x: hidden; max-width: 100vw; width: 100%;">
+  <main>
     <!-- Immersive Video Hero Section -->
-    <section class="container mx-auto px-4 pt-4" style="max-width: 100%; overflow-x: hidden;">
-      <div class="relative rounded-[2.5rem] overflow-hidden bg-slate-900 h-[600px] xl:h-[750px] flex items-end shadow-2xl" style="max-width: 100%; width: 100%;">
+    <section class="container mx-auto px-4 pt-24">
+      <div class="relative rounded-[2.5rem] overflow-hidden bg-slate-900 h-[600px] xl:h-[750px] flex items-end shadow-2xl">
         <!-- Video Background -->
         <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
           <source src="https://www.efeso.com/wp-content/themes/efeso/src/videos/cover.mp4" type="video/mp4">
@@ -153,8 +133,8 @@
     </section>
 
     <!-- Trust Counters Bar -->
-    <section class="py-16 bg-white border-y border-slate-100" style="overflow-x: hidden; max-width: 100vw; width: 100%;">
-      <div class="container mx-auto px-4" style="max-width: 100%; overflow-x: hidden;">
+    <section class="py-16 bg-white border-y border-slate-100">
+      <div class="container mx-auto px-4">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div class="text-center md:border-r border-slate-100">
             <p class="text-5xl font-black text-slate-900">150+</p>
@@ -177,8 +157,8 @@
     </section>
 
     <!-- Core Services Grid -->
-    <section class="py-24 bg-slate-50/50" style="overflow-x: hidden; max-width: 100vw; width: 100%;">
-      <div class="container mx-auto px-4" style="max-width: 100%; overflow-x: hidden;">
+    <section class="py-24 bg-slate-50/50">
+      <div class="container mx-auto px-4">
         <div class="mb-16">
           <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Our Capabilities</span>
           <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4">Core Services</h2>
@@ -235,8 +215,8 @@
     </section>
 
     <!-- Flexible Engagement Models Section -->
-    <section class="py-24 bg-white" style="overflow-x: hidden; max-width: 100vw; width: 100%;">
-      <div class="container mx-auto px-4" style="max-width: 100%; overflow-x: hidden;">
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
         <div class="mb-16">
           <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Engagement Options</span>
           <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4">Flexible Delivery Models</h2>
@@ -285,8 +265,8 @@
     </section>
 
     <!-- Global Impact / Case Studies Section -->
-    <section class="py-24 bg-slate-50 border-y border-slate-100" style="overflow-x: hidden; max-width: 100vw; width: 100%;">
-      <div class="container mx-auto px-4" style="max-width: 100%; overflow-x: hidden;">
+    <section class="py-24 bg-slate-50 border-y border-slate-100">
+      <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
             <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Our Work</span>
@@ -332,8 +312,8 @@
     </section>
 
     <!-- Industries Slider (Simplified Pills) -->
-    <section class="py-24 bg-white overflow-hidden" style="max-width: 100vw; width: 100%;">
-      <div class="container mx-auto px-4 text-center" style="max-width: 100%; overflow-x: hidden;">
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4 text-center">
         <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Expertise</span>
         <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4 mb-16">Industries We Serve</h2>
         
@@ -349,7 +329,7 @@
     </section>
 
     <!-- Parallax Graphic Spacer -->
-    <div class="container mx-auto px-4 relative h-32 hidden lg:block" style="max-width: 100%; overflow-x: hidden;">
+    <div class="container mx-auto px-4 relative h-32 hidden lg:block">
       <div class="parallax-bg !top-0">
         <img src="https://www.efeso.com/wp-content/themes/efeso/assets/img/parallax/talisman-greylight.svg" alt="Decor">
       </div>
