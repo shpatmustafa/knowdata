@@ -4,6 +4,28 @@
   .container {
     max-width: 1400px !important;
   }
+  
+  /* Dropdown hover fix - bridge the gap and keep dropdown visible when hovering over it */
+  .dropdown-group:hover .dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  .dropdown-menu:hover {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  /* Bridge the gap between trigger and dropdown */
+  .dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    height: 12px;
+    background: transparent;
+  }
 </style>
 <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
   <div class="container mx-auto px-4 h-20 flex items-center justify-between">
@@ -13,12 +35,12 @@
 
     <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
       <!-- Services Dropdown -->
-      <div class="relative group">
-        <a href="{base}services.html" data-nav="services" class="hover:text-teal-600 transition-colors flex items-center gap-1 cursor-pointer">
+      <div class="relative group dropdown-group">
+        <a href="{base}services.html" data-nav="services" class="hover:text-teal-600 transition-colors flex items-center gap-1 cursor-pointer py-2">
           Services <i data-lucide="chevron-down" class="w-4 h-4"></i>
         </a>
-        <div class="absolute top-full left-0 pt-2 w-64 bg-transparent z-50">
-          <div class="bg-white rounded-xl shadow-2xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2">
+        <div class="dropdown-menu absolute top-full left-0 mt-1 w-64 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+          <div class="bg-white rounded-xl shadow-2xl border border-slate-100 py-2 relative">
           <a href="{base}services/project-management.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition-colors">
             <i data-lucide="git-branch" class="w-5 h-5 text-teal-600"></i>
             <span>Project Management</span>
@@ -49,12 +71,12 @@
       </div>
 
       <!-- Industries Dropdown -->
-      <div class="relative group">
-        <a href="{base}industries.html" data-nav="industries" class="hover:text-teal-600 transition-colors flex items-center gap-1 cursor-pointer">
+      <div class="relative group dropdown-group">
+        <a href="{base}industries.html" data-nav="industries" class="hover:text-teal-600 transition-colors flex items-center gap-1 cursor-pointer py-2">
           Industries <i data-lucide="chevron-down" class="w-4 h-4"></i>
         </a>
-        <div class="absolute top-full left-0 pt-2 w-64 bg-transparent z-50">
-          <div class="bg-white rounded-xl shadow-2xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2">
+        <div class="dropdown-menu absolute top-full left-0 mt-1 w-64 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+          <div class="bg-white rounded-xl shadow-2xl border border-slate-100 py-2 relative">
           <a href="{base}Industries/renewable-energy.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition-colors">
             <i data-lucide="zap" class="w-5 h-5 text-teal-600"></i>
             <span>Energy & Utilities</span>
