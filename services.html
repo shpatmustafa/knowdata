@@ -4,192 +4,278 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Services - Knowdata</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Rule 1: Strictly disable horizontal scrolling */
+    html, body { 
+      overflow-x: hidden; 
+      width: 100%;
+      position: relative;
+      font-family: 'Inter', sans-serif; 
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Standardized Branding Styles */
+    .text-h1 {
+      font-size: 2.25rem; /* Mobile */
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+    }
+
+    @media (min-width: 768px) { .text-h1 { font-size: 3.5rem; } }
+    @media (min-width: 1024px) { .text-h1 { font-size: 4.25rem; } }
+    @media (min-width: 1280px) { .text-h1 { font-size: 4.75rem; } }
+
+    /* Subtle, Light Hero Background */
+    .hero-subtle {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      position: relative;
+    }
+    
+    .hero-accent-blur {
+      position: absolute;
+      top: -10%;
+      right: -5%;
+      width: 40%;
+      height: 60%;
+      background: radial-gradient(circle, rgba(20, 184, 166, 0.08) 0%, transparent 70%);
+      filter: blur(60px);
+      z-index: 1;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900 antialiased">
 
   <div id="site-header"></div>
   <script src="js/header.js" data-depth="0"></script>
 
-  <!-- Page Header -->
-  <section class="page-header pt-20">
-    <div class="container">
-      <h1>Our Expertise</h1>
-      <p>Comprehensive solutions tailored to your business needs.</p>
-    </div>
-  </section>
+  <main>
+    <!-- Breadcrumbs -->
+    <nav class="container mx-auto px-4 py-6">
+        <ul class="flex items-center text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] gap-2">
+            <li><a href="index.html" class="hover:text-teal-600 transition-colors">Home</a></li>
+            <li><i data-lucide="chevron-right" class="w-3 h-3"></i></li>
+            <li class="text-slate-900">Services</li>
+        </ul>
+    </nav>
 
-  <!-- Modular Approach -->
-  <section class="modular-section">
-    <div class="container">
-      <div class="section-heading center">
-        <span class="sub">Our Modular Approach</span>
-        <h2>A Clear Three-Step AI Journey</h2>
-        <p>Our modular approach breaks AI transformation into manageable, results-driven phases. Each step builds on the last, ensuring a clear path from exploration to full-scale implementation and beyond.</p>
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4">
+      <div class="relative rounded-[2.5rem] overflow-hidden hero-subtle h-auto min-h-[450px] md:min-h-[550px] flex items-center border border-slate-100 shadow-sm py-20 lg:py-0">
+        <div class="hero-accent-blur"></div>
+
+        <!-- Abstract Grid Overlay -->
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none z-0">
+          <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+              <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="black" stroke-width="0.2"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+          </svg>
+        </div>
+
+        <div class="relative z-10 p-8 md:p-16 lg:p-24 w-full">
+          <div class="xl:w-10/12">
+            <h1 class="text-h1 mb-8">
+              Our <br><span class="italic text-teal-600">Expertise.</span>
+            </h1>
+            <p class="text-lg xl:text-xl font-normal text-slate-500 max-w-3xl leading-relaxed mb-10">
+              Comprehensive solutions tailored to your business needs.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="modular-grid">
+    </section>
 
-        <!-- Card 1: AI Pathfinder -->
-        <div class="modular-card">
-          <div class="modular-card-anim">
-            <div class="anim-path-gradient">
-              <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M30 170 Q80 30, 150 100 T270 30" stroke="url(#pathGrad)" stroke-width="3" stroke-dasharray="8 6" stroke-linecap="round">
-                  <animate attributeName="stroke-dashoffset" from="0" to="-56" dur="2s" repeatCount="indefinite"/>
-                </path>
-                <defs>
-                  <linearGradient id="pathGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#009080"/>
-                    <stop offset="100%" stop-color="#725AF6"/>
-                  </linearGradient>
-                </defs>
-              </svg>
+    <!-- Modular Approach -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Our Modular Approach</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4">A Clear Three-Step AI Journey</h2>
+          <p class="text-slate-500 text-lg mt-6 leading-relaxed">Our modular approach breaks AI transformation into manageable, results-driven phases. Each step builds on the last, ensuring a clear path from exploration to full-scale implementation and beyond.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+
+          <!-- Card 1: AI Pathfinder -->
+          <div class="bg-white border border-slate-100 rounded-[2rem] p-8 hover:shadow-xl transition-all">
+            <div class="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center text-teal-600 mb-6">
+              <i data-lucide="search" class="w-6 h-6"></i>
             </div>
-            <div class="fade-overlay"></div>
-          </div>
-          <div class="modular-card-body">
-            <span class="discover-label">Discover</span>
-            <h3>AI Pathfinder</h3>
-            <p>Identify and prioritize high-impact AI opportunities within your organization through structured analysis.</p>
-          </div>
-          <div class="modular-card-footer">
-            <span class="time"><i data-lucide="clock" style="width:14px;height:14px"></i> 6 Weeks</span>
-            <span class="type"><i data-lucide="search" style="width:14px;height:14px"></i> Assessment</span>
-          </div>
-        </div>
-
-        <!-- Card 2: AI Implementation -->
-        <div class="modular-card">
-          <div class="modular-card-anim">
-            <div class="anim-grid-perspective">
-              <div class="anim-grid-inner"></div>
-              <div class="anim-grid-fade"></div>
+            <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Discover</span>
+            <h3 class="text-2xl font-bold text-slate-900 mt-4 mb-4">AI Pathfinder</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Identify and prioritize high-impact AI opportunities within your organization through structured analysis.</p>
+            <div class="flex items-center gap-4 text-xs text-slate-400">
+              <span class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> 6 Weeks</span>
+              <span class="flex items-center gap-2"><i data-lucide="search" class="w-4 h-4"></i> Assessment</span>
             </div>
-            <div class="fade-overlay"></div>
           </div>
-          <div class="modular-card-body">
-            <span class="discover-label">Build</span>
-            <h3>AI Implementation</h3>
-            <p>Execute AI-driven initiatives end-to-end, from tailored model development and integration to optimization and support.</p>
-          </div>
-          <div class="modular-card-footer">
-            <span class="time"><i data-lucide="clock" style="width:14px;height:14px"></i> 6-12 Weeks</span>
-            <span class="type"><i data-lucide="code" style="width:14px;height:14px"></i> Development</span>
-          </div>
-        </div>
 
-        <!-- Card 3: AI Optimization -->
-        <div class="modular-card">
-          <div class="modular-card-anim">
-            <div class="anim-dots">
-              <div class="dot"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
+          <!-- Card 2: AI Implementation -->
+          <div class="bg-white border border-slate-100 rounded-[2rem] p-8 hover:shadow-xl transition-all">
+            <div class="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center text-teal-600 mb-6">
+              <i data-lucide="code" class="w-6 h-6"></i>
             </div>
-            <div class="fade-overlay"></div>
+            <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Build</span>
+            <h3 class="text-2xl font-bold text-slate-900 mt-4 mb-4">AI Implementation</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Execute AI-driven initiatives end-to-end, from tailored model development and integration to optimization and support.</p>
+            <div class="flex items-center gap-4 text-xs text-slate-400">
+              <span class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> 6-12 Weeks</span>
+              <span class="flex items-center gap-2"><i data-lucide="code" class="w-4 h-4"></i> Development</span>
+            </div>
           </div>
-          <div class="modular-card-body">
-            <span class="discover-label">Evolve</span>
-            <h3>AI Optimization</h3>
-            <p>Ensure long-term AI success with continuous monitoring, maintenance, and evolution of your deployed agents.</p>
-          </div>
-          <div class="modular-card-footer">
-            <span class="time"><i data-lucide="clock" style="width:14px;height:14px"></i> Ongoing</span>
-            <span class="type"><i data-lucide="refresh-cw" style="width:14px;height:14px"></i> Support</span>
+
+          <!-- Card 3: AI Optimization -->
+          <div class="bg-white border border-slate-100 rounded-[2rem] p-8 hover:shadow-xl transition-all">
+            <div class="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center text-teal-600 mb-6">
+              <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+            </div>
+            <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Evolve</span>
+            <h3 class="text-2xl font-bold text-slate-900 mt-4 mb-4">AI Optimization</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Ensure long-term AI success with continuous monitoring, maintenance, and evolution of your deployed agents.</p>
+            <div class="flex items-center gap-4 text-xs text-slate-400">
+              <span class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> Ongoing</span>
+              <span class="flex items-center gap-2"><i data-lucide="refresh-cw" class="w-4 h-4"></i> Support</span>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- All Services -->
-  <section class="services-section" style="background:var(--slate-50)">
-    <div class="container">
-      <div class="section-heading center">
-        <span class="sub">Expertise</span>
-        <h2>All Services</h2>
-      </div>
-      <div class="services-grid">
-        <a href="services/project-management.html" class="service-card">
-          <div class="icon-box"><i data-lucide="git-branch" style="width:28px;height:28px"></i></div>
-          <h3>Project Management</h3>
-          <p>End-to-end project delivery with proven methodologies. We ensure your projects are completed on time and within budget.</p>
-          <span class="learn-more">Learn More <i data-lucide="arrow-right" style="width:16px;height:16px"></i></span>
-        </a>
-        <a href="services/solutions-architecture.html" class="service-card">
-          <div class="icon-box"><i data-lucide="settings" style="width:28px;height:28px"></i></div>
-          <h3>Solutions Architecture</h3>
-          <p>Design robust, scalable technology solutions that align with your business objectives and drive sustainable growth.</p>
-          <span class="learn-more">Learn More <i data-lucide="arrow-right" style="width:16px;height:16px"></i></span>
-        </a>
-        <a href="services/business-analysis.html" class="service-card">
-          <div class="icon-box"><i data-lucide="trending-up" style="width:28px;height:28px"></i></div>
-          <h3>Business Analysis</h3>
-          <p>Transform business requirements into actionable technology solutions with our experienced business analysts.</p>
-          <span class="learn-more">Learn More <i data-lucide="arrow-right" style="width:16px;height:16px"></i></span>
-        </a>
-        <a href="services/workday-hris.html" class="service-card">
-          <div class="icon-box"><i data-lucide="users" style="width:28px;height:28px"></i></div>
-          <h3>Workday HRIS</h3>
-          <p>Specialised Workday integration and consulting experts delivering comprehensive solutions architecture.</p>
-          <span class="learn-more">Learn More <i data-lucide="arrow-right" style="width:16px;height:16px"></i></span>
-        </a>
-        <a href="services/microsoft-dynamics.html" class="service-card">
-          <div class="icon-box"><i data-lucide="layout" style="width:28px;height:28px"></i></div>
-          <h3>Microsoft Dynamics</h3>
-          <p>Expert Microsoft Dynamics consulting and implementation services for comprehensive business management.</p>
-          <span class="learn-more">Learn More <i data-lucide="arrow-right" style="width:16px;height:16px"></i></span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Engagement Models -->
-  <section class="engagement-section">
-    <div class="container">
-      <div class="section-heading center">
-        <span class="sub">Flexible Models</span>
-        <h2>Engagement Options</h2>
-      </div>
-      <div class="engagement-grid">
-        <div class="engagement-card dark">
-          <div class="icon-box"><i data-lucide="clock" style="width:32px;height:32px"></i></div>
-          <h3>Part-Time Consulting</h3>
-          <p class="desc">Perfect for ongoing support, strategic guidance, and smaller projects.</p>
-          <ul class="check-list">
-            <li><span class="check-icon"><i data-lucide="check" style="width:12px;height:12px"></i></span> Flexible hourly arrangements</li>
-            <li><span class="check-icon"><i data-lucide="check" style="width:12px;height:12px"></i></span> Strategic advisory services</li>
-            <li><span class="check-icon"><i data-lucide="check" style="width:12px;height:12px"></i></span> Project oversight &amp; guidance</li>
-            <li><span class="check-icon"><i data-lucide="check" style="width:12px;height:12px"></i></span> Cost-effective solution</li>
-          </ul>
-          <button class="btn-white">Learn More</button>
-          <div class="bg-icon"><i data-lucide="clock" style="width:256px;height:256px"></i></div>
+    <!-- All Services -->
+    <section class="py-24 bg-slate-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Expertise</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4">All Services</h2>
         </div>
-        <div class="engagement-card teal">
-          <div class="icon-box"><i data-lucide="user-check" style="width:32px;height:32px"></i></div>
-          <h3>Full-Time Engagement</h3>
-          <p class="desc">Ideal for large-scale transformations and critical projects.</p>
-          <ul class="check-list">
-            <li><span class="check-icon"><i data-lucide="check" style="width:12px;height:12px"></i></span> Dedicated project teams</li>
-            <li><span class="check-icon"><i data-lucide="check" style="width:12px;height:12px"></i></span> End-to-end project delivery</li>
-            <li><span class="check-icon"><i data-lucide="check" style="width:12px;height:12px"></i></span> Comprehensive project management</li>
-            <li><span class="check-icon"><i data-lucide="check" style="width:12px;height:12px"></i></span> Maximum impact &amp; ROI</li>
-          </ul>
-          <button class="btn-teal-white">Get Started</button>
-          <div class="bg-icon"><i data-lucide="rocket" style="width:256px;height:256px"></i></div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a href="services/project-management.html" class="bg-white border border-slate-100 rounded-[2rem] p-8 hover:shadow-xl hover:translate-y-[-4px] transition-all group">
+            <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-teal-600 mb-6">
+              <i data-lucide="git-branch" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Project Management</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">End-to-end project delivery with proven methodologies. We ensure your projects are completed on time and within budget.</p>
+            <span class="text-teal-600 font-bold text-xs uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">
+              Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </span>
+          </a>
+          <a href="services/solutions-architecture.html" class="bg-white border border-slate-100 rounded-[2rem] p-8 hover:shadow-xl hover:translate-y-[-4px] transition-all group">
+            <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-teal-600 mb-6">
+              <i data-lucide="settings" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Solutions Architecture</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Design robust, scalable technology solutions that align with your business objectives and drive sustainable growth.</p>
+            <span class="text-teal-600 font-bold text-xs uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">
+              Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </span>
+          </a>
+          <a href="services/business-analysis.html" class="bg-white border border-slate-100 rounded-[2rem] p-8 hover:shadow-xl hover:translate-y-[-4px] transition-all group">
+            <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-teal-600 mb-6">
+              <i data-lucide="trending-up" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Business Analysis</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Transform business requirements into actionable technology solutions with our experienced business analysts.</p>
+            <span class="text-teal-600 font-bold text-xs uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">
+              Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </span>
+          </a>
+          <a href="services/workday-hris.html" class="bg-white border border-slate-100 rounded-[2rem] p-8 hover:shadow-xl hover:translate-y-[-4px] transition-all group">
+            <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-teal-600 mb-6">
+              <i data-lucide="users" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Workday HRIS</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Specialised Workday integration and consulting experts delivering comprehensive solutions architecture.</p>
+            <span class="text-teal-600 font-bold text-xs uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">
+              Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </span>
+          </a>
+          <a href="services/microsoft-dynamics.html" class="bg-white border border-slate-100 rounded-[2rem] p-8 hover:shadow-xl hover:translate-y-[-4px] transition-all group">
+            <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-teal-600 mb-6">
+              <i data-lucide="layout" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Microsoft Dynamics</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Expert Microsoft Dynamics consulting and implementation services for comprehensive business management.</p>
+            <span class="text-teal-600 font-bold text-xs uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">
+              Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </span>
+          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Engagement Models -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Flexible Models</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4">Engagement Options</h2>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-8">
+          <div class="p-12 rounded-[3rem] bg-slate-900 text-white relative overflow-hidden shadow-2xl group transition-all hover:translate-y-[-4px]">
+            <div class="relative z-10">
+              <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-8">
+                <i data-lucide="clock" class="w-7 h-7 text-teal-400"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Part-Time Consulting</h3>
+              <p class="text-slate-400 mb-8 max-w-sm">Perfect for ongoing support, strategic guidance, and smaller projects.</p>
+              <ul class="space-y-3 text-sm mb-10 font-medium">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="text-teal-400 w-4 h-4 shrink-0"></i> Flexible hourly arrangements</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="text-teal-400 w-4 h-4 shrink-0"></i> Strategic advisory services</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="text-teal-400 w-4 h-4 shrink-0"></i> Project oversight &amp; guidance</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="text-teal-400 w-4 h-4 shrink-0"></i> Cost-effective solution</li>
+              </ul>
+              <a href="#" class="inline-block bg-white text-slate-900 px-10 py-4 rounded-xl font-bold text-sm">Learn More</a>
+            </div>
+            <i data-lucide="clock" class="absolute -bottom-10 -right-10 w-64 h-64 text-white/5 -rotate-12"></i>
+          </div>
+          <div class="p-12 rounded-[3rem] bg-teal-600 text-white relative overflow-hidden shadow-2xl group transition-all hover:translate-y-[-4px]">
+            <div class="relative z-10">
+              <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-8">
+                <i data-lucide="rocket" class="w-7 h-7 text-white"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Full-Time Engagement</h3>
+              <p class="text-teal-50 mb-8 max-w-sm">Ideal for large-scale transformations and critical projects.</p>
+              <ul class="space-y-3 text-sm mb-10 font-medium">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="text-white w-4 h-4 shrink-0"></i> Dedicated project teams</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="text-white w-4 h-4 shrink-0"></i> End-to-end project delivery</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="text-white w-4 h-4 shrink-0"></i> Comprehensive project management</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="text-white w-4 h-4 shrink-0"></i> Maximum impact &amp; ROI</li>
+              </ul>
+              <a href="#" class="inline-block bg-slate-900 text-white px-10 py-4 rounded-xl font-bold text-sm">Get Started</a>
+            </div>
+            <i data-lucide="rocket" class="absolute -bottom-10 -right-10 w-64 h-64 text-white/10 -rotate-12"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <div id="site-footer"></div>
   <script src="js/footer.js" data-depth="0"></script>
 
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="js/main.js"></script>
+  <script>
+    // Initialize icons after page load
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    });
+    
+    // Re-initialize icons after header/footer load (with a small delay)
+    setTimeout(function() {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }, 100);
+  </script>
 </body>
 </html>

@@ -31,8 +31,65 @@
       }
 
       // Re-initialize Lucide icons for the injected header
-      if (window.lucide) {
-        lucide.createIcons();
+      // Wait a bit to ensure Lucide is fully loaded
+      setTimeout(function() {
+        if (window.lucide) {
+          lucide.createIcons();
+        } else {
+          // If Lucide isn't loaded yet, wait a bit more
+          setTimeout(function() {
+            if (window.lucide) {
+              lucide.createIcons();
+            }
+          }, 200);
+        }
+      }, 50);
+
+      // Initialize mobile menu dropdown toggles
+      var mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenu) {
+        var serviceLink = mobileMenu.querySelector('a[data-nav="services"]');
+        var industryLink = mobileMenu.querySelector('a[data-nav="industries"]');
+        
+        if (serviceLink) {
+          var serviceSubmenu = serviceLink.nextElementSibling;
+          if (serviceSubmenu) {
+            serviceLink.addEventListener('click', function(e) {
+              e.preventDefault();
+              serviceSubmenu.classList.toggle('hidden');
+              // Toggle chevron icon
+              var icon = serviceLink.querySelector('i');
+              if (icon) {
+                if (serviceSubmenu.classList.contains('hidden')) {
+                  icon.setAttribute('data-lucide', 'chevron-down');
+                } else {
+                  icon.setAttribute('data-lucide', 'chevron-up');
+                }
+                lucide.createIcons();
+              }
+            });
+          }
+        }
+        
+        if (industryLink) {
+          var industrySubmenu = industryLink.nextElementSibling;
+          if (industrySubmenu) {
+            industryLink.addEventListener('click', function(e) {
+              e.preventDefault();
+              industrySubmenu.classList.toggle('hidden');
+              // Toggle chevron icon
+              var icon = industryLink.querySelector('i');
+              if (icon) {
+                if (industrySubmenu.classList.contains('hidden')) {
+                  icon.setAttribute('data-lucide', 'chevron-down');
+                } else {
+                  icon.setAttribute('data-lucide', 'chevron-up');
+                }
+                lucide.createIcons();
+              }
+            });
+          }
+        }
       }
     });
 })();
