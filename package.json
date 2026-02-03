@@ -1,0 +1,12 @@
+{
+  "name": "knowdata-website",
+  "version": "1.0.0",
+  "description": "Knowdata website - Building Relationships For The Future",
+  "scripts": {
+    "start": "npx http-server . -p 8080 -o",
+    "dev": "npx http-server . -p 8080 -o"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
