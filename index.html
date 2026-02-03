@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowdata | Building Relationships For The Future</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Rule 1: Strictly disable horizontal scrolling */
+    html, body { 
+      overflow-x: hidden; 
+      width: 100%;
+      position: relative;
+      font-family: 'Inter', sans-serif; 
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Standardized Branding Styles - Further reduced for optimal fit */
+    .text-h1 {
+      font-size: 2.25rem; /* Mobile */
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    @media (min-width: 768px) {
+      .text-h1 { font-size: 3.5rem; }
+    }
+
+    @media (min-width: 1024px) {
+      .text-h1 { font-size: 4.25rem; }
+    }
+
+    @media (min-width: 1280px) {
+      .text-h1 { font-size: 4.75rem; } /* Refined desktop size for better balance */
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0, 144, 128, 0.1);
+    }
+
+    /* Service Visual Animations */
+    .service-visual {
+      height: 160px;
+      background: #0f172a;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .vis-pm-lines { width: 60%; height: 4px; background: rgba(255,255,255,0.1); position: relative; border-radius: 2px; }
+    .vis-pm-lines::after { content:''; position: absolute; top:0; left:0; height:100%; width: 40%; background: #14b8a6; border-radius: 2px; animation: pmSlide 2s infinite ease-in-out; }
+    @keyframes pmSlide { 0% { left: 0; width: 0; } 50% { width: 40%; } 100% { left: 100%; width: 0; } }
+
+    .vis-ba-bars { display: flex; align-items: flex-end; gap: 8px; height: 50px; }
+    .vis-ba-bar { width: 10px; background: linear-gradient(to top, #14b8a6, #0ea5e9); border-radius: 2px; animation: barGrow 2s infinite ease-in-out; }
+    .vis-ba-bar:nth-child(1) { height: 40%; animation-delay: 0s; }
+    .vis-ba-bar:nth-child(2) { height: 70%; animation-delay: 0.2s; }
+    .vis-ba-bar:nth-child(3) { height: 100%; animation-delay: 0.4s; }
+    @keyframes barGrow { 0%, 100% { transform: scaleY(0.8); } 50% { transform: scaleY(1); } }
+
+    /* Parallax Elements */
+    .parallax-bg {
+      position: absolute;
+      right: -5%;
+      top: 10%;
+      width: 40%;
+      z-index: -1;
+      opacity: 0.12;
+      pointer-events: none;
+    }
+
+    .tag--outline {
+      @apply bg-teal-50 border border-teal-100 text-teal-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+  <div id="site-header"></div>
+  <script src="js/header.js" data-depth="0"></script>
+
+  <main>
+    <!-- Immersive Video Hero Section -->
+    <section class="container mx-auto px-4 pt-4">
+      <div class="relative rounded-[2.5rem] overflow-hidden bg-slate-900 h-[600px] xl:h-[750px] flex items-end shadow-2xl">
+        <!-- Video Background -->
+        <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
+          <source src="https://www.efeso.com/wp-content/themes/efeso/src/videos/cover.mp4" type="video/mp4">
+        </video>
+
+        <!-- Dynamic Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/30 to-transparent"></div>
+
+        <!-- Hero Content Overlay -->
+        <div class="relative z-10 p-8 md:p-16 lg:p-24 w-full">
+          <div class="xl:w-11/12">
+            <div class="flex items-center space-x-3 text-teal-400 font-bold tracking-wider text-[10px] uppercase mb-8">
+              <span class="bg-white/10 backdrop-blur-md px-2 py-1 rounded">Digital Transformation Partner</span>
+              <span>&bull;</span>
+              <span>Global Excellence</span>
+            </div>
+            
+            <h1 class="text-h1 text-white mb-8">
+              Building Relationships <br><span class="text-teal-400 italic font-normal">For The Future.</span>
+            </h1>
+            
+            <div class="text-lg xl:text-xl font-normal text-slate-300 max-w-3xl leading-relaxed mb-10">
+              <p>We help global leaders integrate new IT with legacy systems to build agile, responsive, and data-driven organizations.</p>
+            </div>
+            
+            <div class="flex flex-wrap gap-4">
+              <a href="#" class="bg-teal-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-teal-500 transition-all shadow-lg shadow-teal-900/20">View Success Stories</a>
+              <a href="methodology.html" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all">Our Methodology</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Counters Bar -->
+    <section class="py-16 bg-white border-y border-slate-100">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center md:border-r border-slate-100">
+            <p class="text-5xl font-black text-slate-900">150+</p>
+            <p class="text-[10px] uppercase font-bold text-slate-400 mt-2 tracking-widest">Enterprise Integrations</p>
+          </div>
+          <div class="text-center md:border-r border-slate-100">
+            <p class="text-5xl font-black text-slate-900">14</p>
+            <p class="text-[10px] uppercase font-bold text-slate-400 mt-2 tracking-widest">European Markets</p>
+          </div>
+          <div class="text-center md:border-r border-slate-100">
+            <p class="text-5xl font-black text-slate-900">€2B+</p>
+            <p class="text-[10px] uppercase font-bold text-slate-400 mt-2 tracking-widest">Spend Managed</p>
+          </div>
+          <div class="text-center">
+            <p class="text-5xl font-black text-slate-900">Zero</p>
+            <p class="text-[10px] uppercase font-bold text-slate-400 mt-2 tracking-widest">Data Breaches</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Services Grid -->
+    <section class="py-24 bg-slate-50/50">
+      <div class="container mx-auto px-4">
+        <div class="mb-16">
+          <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Our Capabilities</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4">Core Services</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div class="glass-card rounded-3xl overflow-hidden group hover:shadow-xl transition-all border-slate-100">
+            <div class="service-visual">
+              <div class="vis-pm-lines"></div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Project Management</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">End-to-end project delivery using agile methodologies to ensure your transformations stay on track.</p>
+              <a href="#" class="text-teal-600 font-bold text-xs uppercase tracking-widest flex items-center group-hover:gap-2 transition-all">
+                Learn More <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="glass-card rounded-3xl overflow-hidden group hover:shadow-xl transition-all border-slate-100">
+            <div class="service-visual">
+              <div class="vis-ba-bars">
+                <div class="vis-ba-bar"></div>
+                <div class="vis-ba-bar"></div>
+                <div class="vis-ba-bar"></div>
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Business Analysis</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">Requirement engineering and process auditing that bridges the gap between business needs and technical reality.</p>
+              <a href="#" class="text-teal-600 font-bold text-xs uppercase tracking-widest flex items-center group-hover:gap-2 transition-all">
+                Learn More <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="glass-card rounded-3xl overflow-hidden group hover:shadow-xl transition-all border-slate-100">
+            <div class="service-visual flex-col gap-2">
+               <i data-lucide="layers" class="text-teal-400 w-12 h-12"></i>
+            </div>
+            <div class="p-8">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Solutions Architecture</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">Designing scalable, future-proof technical architectures that integrate seamlessly with your existing ecosystem.</p>
+              <a href="#" class="text-teal-600 font-bold text-xs uppercase tracking-widest flex items-center group-hover:gap-2 transition-all">
+                Learn More <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flexible Engagement Models Section -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="mb-16">
+          <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Engagement Options</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4">Flexible Delivery Models</h2>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+          <!-- Part-Time -->
+          <div class="relative group p-10 md:p-14 rounded-[3rem] bg-slate-900 text-white overflow-hidden shadow-2xl transition-all hover:translate-y-[-4px]">
+            <div class="relative z-10">
+              <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-8">
+                <i data-lucide="clock" class="w-7 h-7 text-teal-400"></i>
+              </div>
+              <h3 class="text-3xl font-bold mb-4">Part-Time Consulting</h3>
+              <p class="text-slate-400 text-lg mb-8 max-w-md">Perfect for ongoing support, strategic guidance, and maintaining momentum on smaller projects.</p>
+              
+              <ul class="space-y-4 mb-10 text-sm font-medium">
+                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Flexible hourly arrangements</li>
+                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Strategic advisory services</li>
+                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Project oversight & guidance</li>
+              </ul>
+              <a href="#" class="inline-block bg-white text-slate-900 px-8 py-4 rounded-xl font-bold">Inquire Now</a>
+            </div>
+            <i data-lucide="clock" class="absolute -bottom-10 -right-10 w-72 h-72 text-white/5 rotate-[-15deg]"></i>
+          </div>
+
+          <!-- Full-Time -->
+          <div class="relative group p-10 md:p-14 rounded-[3rem] bg-teal-600 text-white overflow-hidden shadow-2xl transition-all hover:translate-y-[-4px]">
+            <div class="relative z-10">
+              <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-8">
+                <i data-lucide="rocket" class="w-7 h-7 text-white"></i>
+              </div>
+              <h3 class="text-3xl font-bold mb-4">Full-Time Engagement</h3>
+              <p class="text-teal-50 text-lg mb-8 max-w-md">Ideal for large-scale transformations and mission-critical projects requiring dedicated senior focus.</p>
+              
+              <ul class="space-y-4 mb-10 text-sm font-medium">
+                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-white"></i> Dedicated cross-functional teams</li>
+                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-white"></i> End-to-end project delivery</li>
+                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-white"></i> Maximum strategic impact & ROI</li>
+              </ul>
+              <a href="#" class="inline-block bg-slate-900 text-white px-8 py-4 rounded-xl font-bold">Get Started</a>
+            </div>
+            <i data-lucide="rocket" class="absolute -bottom-10 -right-10 w-72 h-72 text-white/10 rotate-[-15deg]"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global Impact / Case Studies Section -->
+    <section class="py-24 bg-slate-50 border-y border-slate-100">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Our Work</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4 leading-tight italic">Global Impact.</h2>
+          </div>
+          <a href="#" class="text-teal-600 font-bold uppercase tracking-widest text-xs flex items-center gap-2">View All Success Stories <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Case 1 -->
+          <div class="glass-card rounded-[2.5rem] overflow-hidden group cursor-pointer border border-slate-100">
+            <div class="aspect-video overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700">
+            </div>
+            <div class="p-8 md:p-12">
+                <div class="flex gap-2 mb-6">
+                    <span class="tag--outline">Healthcare</span>
+                    <span class="tag--outline">Workday</span>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900 mb-4">Global Workforce Unification</h3>
+                <p class="text-slate-500 mb-8 leading-relaxed">Establishing a single system of record for a global healthcare provider across 14 European markets.</p>
+                <span class="text-teal-600 font-bold uppercase tracking-widest text-xs">Read Case Study &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Case 2 -->
+          <div class="glass-card rounded-[2.5rem] overflow-hidden group cursor-pointer border border-slate-100">
+            <div class="aspect-video overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700">
+            </div>
+            <div class="p-8 md:p-12">
+                <div class="flex gap-2 mb-6">
+                    <span class="tag--outline">Energy</span>
+                    <span class="tag--outline">Infrastructure</span>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900 mb-4">Powering the Transition</h3>
+                <p class="text-slate-500 mb-8 leading-relaxed">Synchronizing field operations and site spend for a leading renewable energy infrastructure group.</p>
+                <span class="text-teal-600 font-bold uppercase tracking-widest text-xs">Read Case Study &rarr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries Slider (Simplified Pills) -->
+    <section class="py-24 bg-white overflow-hidden">
+      <div class="container mx-auto px-4 text-center">
+        <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Expertise</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4 mb-16">Industries We Serve</h2>
+        
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="infrastructure_renewables.html" class="tag--outline hover:bg-teal-100 !py-3 !px-6">Energy & Utilities</a>
+          <a href="healthcare.html" class="tag--outline hover:bg-teal-100 !py-3 !px-6">Healthcare & Life Sciences</a>
+          <a href="technology_electronics.html" class="tag--outline hover:bg-teal-100 !py-3 !px-6">Technology & Electronics</a>
+          <a href="telecommunications.html" class="tag--outline hover:bg-teal-100 !py-3 !px-6">Telecommunications</a>
+          <a href="#" class="tag--outline hover:bg-teal-100 !py-3 !px-6">Pharma</a>
+          <a href="#" class="tag--outline hover:bg-teal-100 !py-3 !px-6">Medtech</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parallax Graphic Spacer -->
+    <div class="container mx-auto px-4 relative h-32 hidden lg:block">
+      <div class="parallax-bg !top-0">
+        <img src="https://www.efeso.com/wp-content/themes/efeso/assets/img/parallax/talisman-greylight.svg" alt="Decor">
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/footer.js" data-depth="0"></script>
+
+  <script>
+    // Initialize Icons
+    lucide.createIcons();
+
+    // Scroll Parallax for Talisman
+    window.addEventListener('scroll', () => {
+      const parallax = document.querySelector('.parallax-bg');
+      if (parallax) {
+        let scroll = window.pageYOffset;
+        parallax.style.transform = `translateY(${scroll * 0.15}px)`;
+      }
+    });
+
+    function toggleMenu() {
+        // Menu logic
+    }
+  </script>
+</body>
+</html>

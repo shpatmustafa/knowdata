@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Management | Knowdata Consulting - Precision Delivery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Rule 1: Strictly disable horizontal scrolling */
+    html, body { 
+      overflow-x: hidden; 
+      width: 100%;
+      position: relative;
+      font-family: 'Inter', sans-serif; 
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Standardized Branding Styles */
+    .text-h1 {
+      font-size: 2.25rem; /* Mobile */
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+    }
+
+    @media (min-width: 768px) { .text-h1 { font-size: 3.5rem; } }
+    @media (min-width: 1024px) { .text-h1 { font-size: 4.25rem; } }
+    @media (min-width: 1280px) { .text-h1 { font-size: 4.75rem; } }
+
+    /* Refined H2: Balanced weight (800) and size (3.5rem) */
+    .text-h2 {
+      font-size: 2rem; /* Mobile */
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+    }
+
+    @media (min-width: 768px) { .text-h2 { font-size: 2.75rem; } }
+    @media (min-width: 1024px) { .text-h2 { font-size: 3.5rem; } }
+
+    .tag--outline {
+      @apply bg-teal-50 border border-teal-100 text-teal-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 inline-block;
+    }
+
+    /* Subtle, Light Hero Background */
+    .hero-subtle {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      position: relative;
+    }
+    
+    .hero-accent-blur {
+      position: absolute;
+      top: -10%;
+      right: -5%;
+      width: 40%;
+      height: 60%;
+      background: radial-gradient(circle, rgba(20, 184, 166, 0.08) 0%, transparent 70%);
+      filter: blur(60px);
+      z-index: 1;
+    }
+
+    .capability-card {
+      @apply p-8 bg-white border border-slate-100 rounded-[2rem] transition-all hover:shadow-xl hover:translate-y-[-4px];
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+  <div id="site-header"></div>
+  <script src="../js/header.js" data-depth="1"></script>
+
+  <main>
+    <!-- Breadcrumbs -->
+    <nav class="container mx-auto px-4 py-6">
+        <ul class="flex items-center text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] gap-2">
+            <li><a href="index.html" class="hover:text-teal-600 transition-colors">Home</a></li>
+            <li><i data-lucide="chevron-right" class="w-3 h-3"></i></li>
+            <li><a href="#" class="hover:text-teal-600 transition-colors">Services</a></li>
+            <li><i data-lucide="chevron-right" class="w-3 h-3"></i></li>
+            <li class="text-slate-900">Project Management</li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4">
+      <div class="relative rounded-[2.5rem] overflow-hidden hero-subtle h-auto min-h-[450px] md:min-h-[550px] flex items-center border border-slate-100 shadow-sm py-20 lg:py-0">
+        <div class="hero-accent-blur"></div>
+
+        <!-- Abstract Grid Overlay -->
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none z-0">
+          <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+              <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="black" stroke-width="0.2"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+          </svg>
+        </div>
+
+        <div class="relative z-10 p-8 md:p-16 lg:p-24 w-full text-left">
+          <div class="xl:w-10/12">
+            <span class="tag--outline">Service Overview</span>
+            <h1 class="text-h1 mb-8">
+              Project <br><span class="italic text-teal-600">Management.</span>
+            </h1>
+            <p class="text-lg xl:text-xl font-normal text-slate-500 max-w-3xl leading-relaxed mb-10">
+              Our Project Management service ensures your initiatives are delivered on time, within scope, and on budget through rigorous Agile and Waterfall methodologies.
+            </p>
+            <a href="#" class="inline-block bg-teal-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-teal-500 transition-all shadow-lg shadow-teal-900/20">Secure Your Timeline</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Grid -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="mb-16">
+          <h2 class="text-h2">Key Features.</h2>
+          <div class="h-1 w-16 bg-teal-500 mt-4"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="capability-card">
+            <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-teal-600 mb-6"><i data-lucide="layers"></i></div>
+            <h4 class="text-xl font-bold mb-3">Agile & Waterfall</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Flexibility where you need it, structure where you don't. We tailor methodologies to suit your project's unique complexity.</p>
+          </div>
+          <div class="capability-card">
+            <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-teal-600 mb-6"><i data-lucide="shield-check"></i></div>
+            <h4 class="text-xl font-bold mb-3">Risk Management</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Proactive identification and mitigation strategies to ensure project roadblocks are cleared before they impact delivery.</p>
+          </div>
+          <div class="capability-card">
+            <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-teal-600 mb-6"><i data-lucide="message-square"></i></div>
+            <h4 class="text-xl font-bold mb-3">Stakeholder Sync</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Absolute clarity with executive show-and-tell demos and structured reporting across all organizational levels.</p>
+          </div>
+          <div class="capability-card">
+            <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-teal-600 mb-6"><i data-lucide="check-square"></i></div>
+            <h4 class="text-xl font-bold mb-3">Quality Assurance</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Rigorous testing and validation phases to ensure the final output matches the initial strategic intent exactly.</p>
+          </div>
+          <div class="capability-card">
+            <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-teal-600 mb-6"><i data-lucide="refresh-cw"></i></div>
+            <h4 class="text-xl font-bold mb-3">Change Management</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Guiding your people through digital transitions to ensure high user adoption and minimal operational disruption.</p>
+          </div>
+          <div class="capability-card">
+            <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-teal-600 mb-6"><i data-lucide="users"></i></div>
+            <h4 class="text-xl font-bold mb-3">Resource Optimization</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Strategic allocation of senior talent and technical density to maximize output while maintaining a lean budget.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section with Stock Photo -->
+    <section class="py-24 bg-slate-50 border-y border-slate-100">
+      <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="text-h2 mb-10">Business Benefits.</h2>
+            <ul class="space-y-6">
+              <li class="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
+                <i data-lucide="check-circle" class="text-teal-600 shrink-0"></i>
+                <span class="font-semibold text-slate-800">30% reduction in delivery time via structured velocity</span>
+              </li>
+              <li class="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
+                <i data-lucide="check-circle" class="text-teal-600 shrink-0"></i>
+                <span class="font-semibold text-slate-800">Enhanced stakeholder satisfaction and buy-in</span>
+              </li>
+              <li class="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
+                <i data-lucide="check-circle" class="text-teal-600 shrink-0"></i>
+                <span class="font-semibold text-slate-800">Proactive risk mitigation and barrier removal</span>
+              </li>
+              <li class="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
+                <i data-lucide="check-circle" class="text-teal-600 shrink-0"></i>
+                <span class="font-semibold text-slate-800">Optimized cost control and resource utilization</span>
+              </li>
+            </ul>
+          </div>
+          <div class="relative rounded-[3rem] overflow-hidden shadow-2xl h-[500px]">
+            <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=1000" alt="Project Planning Team" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flexible Engagement Models -->
+    <section class="py-24 bg-white border-t border-slate-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Delivery</span>
+          <h2 class="text-h2">Engagement Options</h2>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+          <!-- Model 1 -->
+          <div class="p-12 rounded-[3rem] bg-slate-900 text-white relative overflow-hidden shadow-2xl group transition-all hover:translate-y-[-4px]">
+            <div class="relative z-10">
+              <h3 class="text-2xl font-bold mb-4">Part-Time Oversight</h3>
+              <p class="text-slate-400 mb-8 max-w-sm">Strategic guidance and governance support for internal teams managing active projects.</p>
+              <ul class="space-y-3 text-sm mb-10 font-medium">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="text-teal-400 w-4 h-4 shrink-0"></i> Bi-weekly project auditing</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="text-teal-400 w-4 h-4 shrink-0"></i> Risk & roadblock advisory</li>
+              </ul>
+              <a href="#" class="inline-block bg-white text-slate-900 px-10 py-4 rounded-xl font-bold text-sm">Learn More</a>
+            </div>
+            <i data-lucide="clock" class="absolute -bottom-10 -right-10 w-64 h-64 text-white/5 -rotate-12"></i>
+          </div>
+
+          <!-- Model 2 -->
+          <div class="p-12 rounded-[3rem] bg-teal-600 text-white relative overflow-hidden shadow-2xl group transition-all hover:translate-y-[-4px]">
+            <div class="relative z-10">
+              <h3 class="text-2xl font-bold mb-4">Full-Scale Delivery</h3>
+              <p class="text-teal-50 mb-8 max-w-sm">End-to-end execution where Knowdata takes full accountability for project success.</p>
+              <ul class="space-y-3 text-sm mb-10 font-medium">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="text-white w-4 h-4 shrink-0"></i> Dedicated PMO squad</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="text-white w-4 h-4 shrink-0"></i> Outcome-based accountability</li>
+              </ul>
+              <a href="#" class="inline-block bg-slate-900 text-white px-10 py-4 rounded-xl font-bold text-sm">Get Started</a>
+            </div>
+            <i data-lucide="rocket" class="absolute -bottom-10 -right-10 w-64 h-64 text-white/10 -rotate-12"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../js/footer.js" data-depth="1"></script>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
