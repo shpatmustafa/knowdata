@@ -3,87 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Knowdata | Building Relationships For The Future</title>
+  <title>Knowdata | AI Transformation & Workday Solution Architecture</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
-    html, body { 
-      font-family: 'Inter', sans-serif; 
+    html, body {
+      font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
+    .container { max-width: 1400px !important; }
 
-    /* Global container max-width */
-    .container {
-      max-width: 1400px !important;
-    }
-
-    /* Standardized Branding Styles - Further reduced for optimal fit */
     .text-h1 {
-      font-size: 2.25rem; /* Mobile */
+      font-size: 2.25rem;
       font-weight: 600;
       line-height: 1.1;
       letter-spacing: -0.02em;
     }
-
-    @media (min-width: 768px) {
-      .text-h1 { font-size: 3.5rem; }
-    }
-
-    @media (min-width: 1024px) {
-      .text-h1 { font-size: 4.25rem; }
-    }
-
-    @media (min-width: 1280px) {
-      .text-h1 { font-size: 4.75rem; } /* Refined desktop size for better balance */
-    }
+    @media (min-width: 768px) { .text-h1 { font-size: 3.5rem; } }
+    @media (min-width: 1024px) { .text-h1 { font-size: 4.25rem; } }
+    @media (min-width: 1280px) { .text-h1 { font-size: 4.75rem; } }
 
     .glass-card {
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(0, 144, 128, 0.1);
     }
-
-    /* Service Visual Animations */
-    .service-visual {
-      height: 160px;
-      background: #0f172a;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .vis-pm-lines { width: 60%; height: 4px; background: rgba(255,255,255,0.1); position: relative; border-radius: 2px; }
-    .vis-pm-lines::after { content:''; position: absolute; top:0; left:0; height:100%; width: 40%; background: #14b8a6; border-radius: 2px; animation: pmSlide 2s infinite ease-in-out; }
-    @keyframes pmSlide { 0% { left: 0; width: 0; } 50% { width: 40%; } 100% { left: 100%; width: 0; } }
-
-    .vis-ba-bars { display: flex; align-items: flex-end; gap: 8px; height: 50px; }
-    .vis-ba-bar { width: 10px; background: linear-gradient(to top, #14b8a6, #0ea5e9); border-radius: 2px; animation: barGrow 2s infinite ease-in-out; }
-    .vis-ba-bar:nth-child(1) { height: 40%; animation-delay: 0s; }
-    .vis-ba-bar:nth-child(2) { height: 70%; animation-delay: 0.2s; }
-    .vis-ba-bar:nth-child(3) { height: 100%; animation-delay: 0.4s; }
-    @keyframes barGrow { 0%, 100% { transform: scaleY(0.8); } 50% { transform: scaleY(1); } }
-
-    /* Parallax Elements */
-    .parallax-bg {
-      position: absolute;
-      right: -5%;
-      top: 10%;
-      width: 40%;
-      z-index: -1;
-      opacity: 0.12;
-      pointer-events: none;
-    }
-
     .tag--outline {
       @apply bg-teal-50 border border-teal-100 text-teal-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest;
     }
@@ -95,58 +44,55 @@
   <script src="js/header.js" data-depth="0"></script>
 
   <main>
-    <!-- Immersive Video Hero Section -->
+    <!-- Hero Section -->
     <section class="container mx-auto px-4 pt-24">
       <div class="relative rounded-[2.5rem] overflow-hidden bg-slate-900 h-[600px] xl:h-[750px] flex items-end shadow-2xl">
         <!-- Video Background -->
         <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
           <source src="https://www.efeso.com/wp-content/themes/efeso/src/videos/cover.mp4" type="video/mp4">
         </video>
-
-        <!-- Dynamic Overlay -->
         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/30 to-transparent"></div>
 
-        <!-- Hero Content Overlay -->
         <div class="relative z-10 p-8 md:p-16 lg:p-24 w-full">
           <div class="xl:w-11/12">
             <div class="flex items-center space-x-3 text-teal-400 font-bold tracking-wider text-[10px] uppercase mb-8">
-              <span class="bg-white/10 backdrop-blur-md px-2 py-1 rounded">Digital Transformation Partner</span>
+              <span class="bg-white/10 backdrop-blur-md px-2 py-1 rounded">AI Strategy & Workday Solutions</span>
               <span>&bull;</span>
-              <span>Global Excellence</span>
+              <span>Enterprise Transformation</span>
             </div>
-            
+
             <h1 class="text-h1 text-white mb-8">
-              Building Relationships <br><span class="text-teal-400 italic font-normal">For The Future.</span>
+              Reimagine How Your Organisation <br><span class="text-teal-400 italic font-normal">Operates.</span>
             </h1>
-            
+
             <div class="text-lg xl:text-xl font-normal text-slate-300 max-w-3xl leading-relaxed mb-10">
-              <p>We help global leaders integrate new IT with legacy systems to build agile, responsive, and data-driven organizations.</p>
+              <p>We guide organisations through AI transformation and Workday solution architecture that delivers measurable business progression. Not building on broken processes &mdash; reimagining them entirely.</p>
             </div>
-            
+
             <div class="flex flex-wrap gap-4">
-              <a href="success-stories.html" class="bg-teal-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-teal-500 transition-all shadow-lg shadow-teal-900/20">View Success Stories</a>
-              <a href="methodology.html" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all">Our Methodology</a>
+              <a href="services.html" class="bg-teal-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-teal-500 transition-all shadow-lg shadow-teal-900/20">Explore Our Services</a>
+              <a href="approach.html" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all">Our Approach</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Trust Counters Bar -->
+    <!-- Trust Metrics -->
     <section class="py-16 bg-white border-y border-slate-100">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div class="text-center md:border-r border-slate-100">
-            <p class="text-5xl font-black text-slate-900">150+</p>
-            <p class="text-[10px] uppercase font-bold text-slate-400 mt-2 tracking-widest">Enterprise Integrations</p>
+            <p class="text-5xl font-black text-slate-900">100+</p>
+            <p class="text-[10px] uppercase font-bold text-slate-400 mt-2 tracking-widest">Enterprise Implementations</p>
           </div>
           <div class="text-center md:border-r border-slate-100">
-            <p class="text-5xl font-black text-slate-900">14</p>
-            <p class="text-[10px] uppercase font-bold text-slate-400 mt-2 tracking-widest">European Markets</p>
+            <p class="text-5xl font-black text-slate-900">4</p>
+            <p class="text-[10px] uppercase font-bold text-slate-400 mt-2 tracking-widest">Active Markets</p>
           </div>
           <div class="text-center md:border-r border-slate-100">
-            <p class="text-5xl font-black text-slate-900">€2B+</p>
-            <p class="text-[10px] uppercase font-bold text-slate-400 mt-2 tracking-widest">Spend Managed</p>
+            <p class="text-5xl font-black text-slate-900">99%</p>
+            <p class="text-[10px] uppercase font-bold text-slate-400 mt-2 tracking-widest">Client Satisfaction</p>
           </div>
           <div class="text-center">
             <p class="text-5xl font-black text-slate-900">Zero</p>
@@ -156,217 +102,145 @@
       </div>
     </section>
 
-    <!-- Core Services Grid -->
+    <!-- Why KnowData -->
     <section class="py-24 bg-slate-50/50">
       <div class="container mx-auto px-4">
-        <div class="mb-16">
-          <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Our Capabilities</span>
-          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4">Core Services</h2>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Service 1 -->
-          <div class="glass-card rounded-3xl overflow-hidden group hover:shadow-xl transition-all border-slate-100">
-            <div class="service-visual">
-              <div class="vis-pm-lines"></div>
-            </div>
-            <div class="p-8">
-              <h3 class="text-xl font-bold text-slate-900 mb-3">Project Management</h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-6">End-to-end project delivery using agile methodologies to ensure your transformations stay on track.</p>
-              <a href="#" class="text-teal-600 font-bold text-xs uppercase tracking-widest flex items-center group-hover:gap-2 transition-all">
-                Learn More <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Service 2 -->
-          <div class="glass-card rounded-3xl overflow-hidden group hover:shadow-xl transition-all border-slate-100">
-            <div class="service-visual">
-              <div class="vis-ba-bars">
-                <div class="vis-ba-bar"></div>
-                <div class="vis-ba-bar"></div>
-                <div class="vis-ba-bar"></div>
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Why KnowData</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4 mb-8">Using AI to <span class="text-teal-600">Reimagine</span>, Not Rebuild</h2>
+            <p class="text-lg text-slate-600 leading-relaxed mb-8">
+              We help companies define and build their Agentic Strategy. Creating a mind shift away from siloed solutions into collaborative solutions that input into the wider teams and drive enterprise-wide progression.
+            </p>
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="brain" class="w-6 h-6 text-teal-600"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-slate-900 mb-1">AI-Driven Transformation</h4>
+                  <p class="text-slate-600 text-sm">AI is the enabler, not the end goal. Every engagement is measured by business impact.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="settings" class="w-6 h-6 text-teal-600"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-slate-900 mb-1">Workday Solution Architecture</h4>
+                  <p class="text-slate-600 text-sm">Robust, secure, and efficient HCM implementations that scale with your business.</p>
+                </div>
               </div>
             </div>
-            <div class="p-8">
-              <h3 class="text-xl font-bold text-slate-900 mb-3">Business Analysis</h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-6">Requirement engineering and process auditing that bridges the gap between business needs and technical reality.</p>
-              <a href="#" class="text-teal-600 font-bold text-xs uppercase tracking-widest flex items-center group-hover:gap-2 transition-all">
-                Learn More <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-              </a>
-            </div>
           </div>
-
-          <!-- Service 3 -->
-          <div class="glass-card rounded-3xl overflow-hidden group hover:shadow-xl transition-all border-slate-100">
-            <div class="service-visual flex-col gap-2">
-               <i data-lucide="layers" class="text-teal-400 w-12 h-12"></i>
-            </div>
-            <div class="p-8">
-              <h3 class="text-xl font-bold text-slate-900 mb-3">Solutions Architecture</h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-6">Designing scalable, future-proof technical architectures that integrate seamlessly with your existing ecosystem.</p>
-              <a href="#" class="text-teal-600 font-bold text-xs uppercase tracking-widest flex items-center group-hover:gap-2 transition-all">
-                Learn More <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-              </a>
+          <div class="bg-white border border-slate-200 rounded-3xl p-12 shadow-xl">
+            <div class="space-y-8">
+              <div class="flex items-center gap-4">
+                <i data-lucide="target" class="w-8 h-8 text-teal-600"></i>
+                <div>
+                  <p class="text-2xl font-black text-slate-900">Organisational Progression</p>
+                  <p class="text-slate-500 text-sm">Not just technology delivery</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <i data-lucide="users" class="w-8 h-8 text-teal-600"></i>
+                <div>
+                  <p class="text-2xl font-black text-slate-900">Collaborative Solutions</p>
+                  <p class="text-slate-500 text-sm">Breaking down silos across teams</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <i data-lucide="trending-up" class="w-8 h-8 text-teal-600"></i>
+                <div>
+                  <p class="text-2xl font-black text-slate-900">Measured by Impact</p>
+                  <p class="text-slate-500 text-sm">Every engagement delivers ROI</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Flexible Engagement Models Section -->
+    <!-- Two Service Pillars -->
     <section class="py-24 bg-white">
       <div class="container mx-auto px-4">
-        <div class="mb-16">
-          <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Engagement Options</span>
-          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4">Flexible Delivery Models</h2>
+        <div class="mb-16 text-center">
+          <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Our Services</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4">Two Pillars of Enterprise Transformation</h2>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-8">
-          <!-- Part-Time -->
-          <div class="relative group p-10 md:p-14 rounded-[3rem] bg-slate-900 text-white overflow-hidden shadow-2xl transition-all hover:translate-y-[-4px]">
+          <!-- Pillar 1: AI Transformation -->
+          <a href="services/ai-transformation.html" class="relative group p-10 md:p-14 rounded-[3rem] bg-slate-900 text-white overflow-hidden shadow-2xl transition-all hover:translate-y-[-4px] block">
             <div class="relative z-10">
-              <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-8">
-                <i data-lucide="clock" class="w-7 h-7 text-teal-400"></i>
+              <div class="flex items-center gap-3 mb-8">
+                <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center">
+                  <i data-lucide="brain" class="w-7 h-7 text-teal-400"></i>
+                </div>
+                <span class="tag--outline !bg-white/10 !border-white/20 !text-teal-400">Service Pillar 1</span>
               </div>
-              <h3 class="text-3xl font-bold mb-4">Part-Time Consulting</h3>
-              <p class="text-slate-400 text-lg mb-8 max-w-md">Perfect for ongoing support, strategic guidance, and maintaining momentum on smaller projects.</p>
-              
-              <ul class="space-y-4 mb-10 text-sm font-medium">
-                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Flexible hourly arrangements</li>
-                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Strategic advisory services</li>
-                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Project oversight & guidance</li>
+              <h3 class="text-3xl font-bold mb-4">AI Transformation</h3>
+              <p class="text-slate-400 text-lg mb-8 max-w-md leading-relaxed">Enterprise-wide implementations that fundamentally improve how your organisation operates, decides, and competes.</p>
+              <ul class="space-y-3 mb-10 text-sm font-medium">
+                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> AI Strategy Definition</li>
+                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> End-to-End Integration</li>
+                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Change Management</li>
+                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Continuous Optimisation</li>
               </ul>
-              <a href="#" class="inline-block bg-white text-slate-900 px-8 py-4 rounded-xl font-bold">Inquire Now</a>
+              <span class="inline-block bg-teal-600 text-white px-8 py-4 rounded-xl font-bold group-hover:bg-teal-500 transition-all">Learn More</span>
             </div>
-            <i data-lucide="clock" class="absolute -bottom-10 -right-10 w-72 h-72 text-white/5 rotate-[-15deg]"></i>
-          </div>
+            <i data-lucide="brain" class="absolute -bottom-10 -right-10 w-72 h-72 text-white/5 rotate-[-15deg]"></i>
+          </a>
 
-          <!-- Full-Time -->
-          <div class="relative group p-10 md:p-14 rounded-[3rem] bg-teal-600 text-white overflow-hidden shadow-2xl transition-all hover:translate-y-[-4px]">
+          <!-- Pillar 2: Workday Solution Architecture -->
+          <a href="services/workday-architecture.html" class="relative group p-10 md:p-14 rounded-[3rem] bg-teal-600 text-white overflow-hidden shadow-2xl transition-all hover:translate-y-[-4px] block">
             <div class="relative z-10">
-              <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-8">
-                <i data-lucide="rocket" class="w-7 h-7 text-white"></i>
+              <div class="flex items-center gap-3 mb-8">
+                <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center">
+                  <i data-lucide="settings" class="w-7 h-7 text-white"></i>
+                </div>
+                <span class="tag--outline !bg-white/10 !border-white/20 !text-white">Service Pillar 2</span>
               </div>
-              <h3 class="text-3xl font-bold mb-4">Full-Time Engagement</h3>
-              <p class="text-teal-50 text-lg mb-8 max-w-md">Ideal for large-scale transformations and mission-critical projects requiring dedicated senior focus.</p>
-              
-              <ul class="space-y-4 mb-10 text-sm font-medium">
-                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-white"></i> Dedicated cross-functional teams</li>
-                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-white"></i> End-to-end project delivery</li>
-                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-white"></i> Maximum strategic impact & ROI</li>
+              <h3 class="text-3xl font-bold mb-4">Workday Solution Architecture</h3>
+              <p class="text-teal-50 text-lg mb-8 max-w-md leading-relaxed">Robust, secure, and efficient HCM implementations that support your long-term strategic vision.</p>
+              <ul class="space-y-3 mb-10 text-sm font-medium">
+                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-white"></i> Deployment Architecture</li>
+                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-white"></i> Tenant Optimisation</li>
+                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-white"></i> Integration Architecture</li>
+                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-white"></i> AI-Enhanced Workday</li>
               </ul>
-              <a href="#" class="inline-block bg-slate-900 text-white px-8 py-4 rounded-xl font-bold">Get Started</a>
+              <span class="inline-block bg-slate-900 text-white px-8 py-4 rounded-xl font-bold group-hover:bg-slate-800 transition-all">Learn More</span>
             </div>
-            <i data-lucide="rocket" class="absolute -bottom-10 -right-10 w-72 h-72 text-white/10 rotate-[-15deg]"></i>
-          </div>
+            <i data-lucide="settings" class="absolute -bottom-10 -right-10 w-72 h-72 text-white/10 rotate-[-15deg]"></i>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Global Impact / Case Studies Section -->
-    <section class="py-24 bg-slate-50 border-y border-slate-100">
+    <!-- CTA -->
+    <section class="py-24 bg-teal-600 text-white text-center">
       <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div>
-            <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Our Work</span>
-            <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4 leading-tight italic">Global Impact.</h2>
-          </div>
-          <a href="success-stories.html" class="text-teal-600 font-bold uppercase tracking-widest text-xs flex items-center gap-2">View All Success Stories <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-          <!-- Case 1 -->
-          <div class="glass-card rounded-[2.5rem] overflow-hidden group cursor-pointer border border-slate-100">
-            <div class="aspect-video overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700">
-            </div>
-            <div class="p-8 md:p-12">
-                <div class="flex gap-2 mb-6">
-                    <span class="tag--outline">Healthcare</span>
-                    <span class="tag--outline">Workday</span>
-                </div>
-                <h3 class="text-2xl font-bold text-slate-900 mb-4">Global Workforce Unification</h3>
-                <p class="text-slate-500 mb-8 leading-relaxed">Establishing a single system of record for a global healthcare provider across 14 European markets.</p>
-                <span class="text-teal-600 font-bold uppercase tracking-widest text-xs">Read Case Study &rarr;</span>
-            </div>
-          </div>
-
-          <!-- Case 2 -->
-          <div class="glass-card rounded-[2.5rem] overflow-hidden group cursor-pointer border border-slate-100">
-            <div class="aspect-video overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700">
-            </div>
-            <div class="p-8 md:p-12">
-                <div class="flex gap-2 mb-6">
-                    <span class="tag--outline">Energy</span>
-                    <span class="tag--outline">Infrastructure</span>
-                </div>
-                <h3 class="text-2xl font-bold text-slate-900 mb-4">Powering the Transition</h3>
-                <p class="text-slate-500 mb-8 leading-relaxed">Synchronizing field operations and site spend for a leading renewable energy infrastructure group.</p>
-                <span class="text-teal-600 font-bold uppercase tracking-widest text-xs">Read Case Study &rarr;</span>
-            </div>
-          </div>
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-6">Ready to Transform Your Organisation?</h2>
+        <p class="text-xl text-teal-50 mb-10 max-w-2xl mx-auto">Let's discuss how AI transformation and Workday architecture can drive measurable progression for your business.</p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="contact.html" class="bg-white text-teal-700 px-8 py-4 rounded-xl font-bold hover:bg-slate-100 transition-all shadow-lg">Get in Touch</a>
+          <a href="approach.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-teal-700 transition-all">Our Approach</a>
         </div>
       </div>
     </section>
-
-    <!-- Industries Slider (Simplified Pills) -->
-    <section class="py-24 bg-white">
-      <div class="container mx-auto px-4 text-center">
-        <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Expertise</span>
-        <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4 mb-16">Industries We Serve</h2>
-        
-        <div class="flex flex-wrap justify-center gap-4">
-          <a href="Industries/renewable-energy.html" class="tag--outline hover:bg-teal-100 !py-3 !px-6">Energy & Utilities</a>
-          <a href="Industries/healthcare.html" class="tag--outline hover:bg-teal-100 !py-3 !px-6">Healthcare & Life Sciences</a>
-          <a href="Industries/technology.html" class="tag--outline hover:bg-teal-100 !py-3 !px-6">Technology & Electronics</a>
-          <a href="Industries/telecommunication.html" class="tag--outline hover:bg-teal-100 !py-3 !px-6">Telecommunications</a>
-          <a href="Industries/pharma.html" class="tag--outline hover:bg-teal-100 !py-3 !px-6">Pharma</a>
-          <a href="Industries/medtech.html" class="tag--outline hover:bg-teal-100 !py-3 !px-6">Medtech</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Parallax Graphic Spacer -->
-    <div class="container mx-auto px-4 relative h-32 hidden lg:block">
-      <div class="parallax-bg !top-0">
-        <img src="https://www.efeso.com/wp-content/themes/efeso/assets/img/parallax/talisman-greylight.svg" alt="Decor">
-      </div>
-    </div>
   </main>
 
   <div id="site-footer"></div>
   <script src="js/footer.js" data-depth="0"></script>
 
   <script>
-    // Initialize Icons after page and header load
     document.addEventListener('DOMContentLoaded', function() {
-      // Wait for header to load, then initialize icons
       setTimeout(function() {
-        if (window.lucide) {
-          lucide.createIcons();
-        }
+        if (window.lucide) { lucide.createIcons(); }
       }, 300);
     });
-
-    // Also initialize immediately if Lucide is already loaded
-    if (window.lucide) {
-      lucide.createIcons();
-    }
-
-    // Scroll Parallax for Talisman
-    window.addEventListener('scroll', () => {
-      const parallax = document.querySelector('.parallax-bg');
-      if (parallax) {
-        let scroll = window.pageYOffset;
-        parallax.style.transform = `translateY(${scroll * 0.15}px)`;
-      }
-    });
-
-    function toggleMenu() {
-        // Menu logic
-    }
+    if (window.lucide) { lucide.createIcons(); }
   </script>
 </body>
 </html>

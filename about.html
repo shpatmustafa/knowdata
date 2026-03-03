@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Knowdata</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          container: {
+            center: true,
+            padding: '1rem',
+            screens: {
+              '2xl': '1400px',
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Global container max-width for all pages */
+    .container {
+      max-width: 1400px !important;
+    }
+
+    @media (min-width: 640px) {
+      .container {
+        max-width: 1400px !important;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        max-width: 1400px !important;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .container {
+        max-width: 1400px !important;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .container {
+        max-width: 1400px !important;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .container {
+        max-width: 1400px !important;
+      }
+    }
+
+    /* Rule 1: Strictly disable horizontal scrolling */
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Standardized Branding Styles */
+    .text-h1 {
+      font-size: 2.25rem; /* Mobile */
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    @media (min-width: 768px) { .text-h1 { font-size: 3.5rem; } }
+    @media (min-width: 1024px) { .text-h1 { font-size: 4.25rem; } }
+    @media (min-width: 1280px) { .text-h1 { font-size: 4.75rem; } }
+
+    .text-h2 {
+      @apply text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+  <div id="site-header"></div>
+  <script src="js/header.js" data-depth="0"></script>
+
+  <main>
+    <!-- Breadcrumbs -->
+    <nav class="container mx-auto px-4 py-6">
+      <ul class="flex items-center text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] gap-2">
+        <li><a href="index.html" class="hover:text-teal-600 transition-colors">Home</a></li>
+        <li><i data-lucide="chevron-right" class="w-3 h-3"></i></li>
+        <li class="text-slate-900">About</li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4">
+      <div class="relative rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 min-h-[500px] md:min-h-[600px] flex items-center shadow-2xl py-20 lg:py-0">
+        <!-- Decorative blur -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-teal-600/20 to-transparent"></div>
+        <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 p-8 md:p-16 lg:p-24 w-full">
+          <div class="xl:w-11/12">
+            <div class="flex items-center gap-3 mb-8">
+              <span class="bg-white/10 backdrop-blur-md text-teal-400 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Who We Are</span>
+            </div>
+            <h1 class="text-h1 text-white mb-8">
+              About <span class="italic text-teal-400">KnowData.</span>
+            </h1>
+            <p class="text-lg xl:text-xl font-normal text-slate-300 max-w-3xl leading-relaxed mb-10">
+              We are a consulting firm helping organisations harness the power of AI and Workday to drive measurable business progression. We don't just implement technology &mdash; we reimagine how enterprises operate.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="contact.html" class="bg-teal-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-teal-500 transition-all shadow-lg shadow-teal-900/20">Work With Us</a>
+              <a href="approach.html" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all">Our Approach</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-5 gap-16 items-start">
+          <!-- Mission Content (3 cols) -->
+          <div class="lg:col-span-3">
+            <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Our Mission</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4 mb-8 leading-tight">Driving Organisational <span class="text-teal-600">Progression</span></h2>
+            <div class="space-y-6 text-slate-600 text-lg leading-relaxed">
+              <p>
+                At KnowData, we use AI to reimagine, not rebuild. Too many organisations invest in technology that simply digitises broken processes. We take a fundamentally different approach &mdash; challenging assumptions, rethinking workflows, and designing solutions that deliver genuine transformation.
+              </p>
+              <p>
+                We help companies define and build their Agentic Strategy, creating a mind shift away from siloed solutions into collaborative approaches that input into wider teams and drive enterprise-wide progression.
+              </p>
+              <p>
+                Every engagement we undertake is measured by the business impact it delivers. From AI strategy definition through to Workday solution architecture, our focus is always on outcomes that matter &mdash; not just technology delivery.
+              </p>
+            </div>
+          </div>
+
+          <!-- Stats Sidebar (2 cols) -->
+          <div class="lg:col-span-2">
+            <div class="bg-slate-900 rounded-3xl p-10 text-white shadow-2xl">
+              <h3 class="text-xl font-bold text-teal-400 mb-8 italic">By the Numbers</h3>
+              <div class="space-y-8">
+                <div class="border-b border-slate-700 pb-8">
+                  <p class="text-5xl font-black text-white mb-2">100+</p>
+                  <p class="text-sm text-slate-400 font-medium">Enterprise Implementations</p>
+                </div>
+                <div class="border-b border-slate-700 pb-8">
+                  <p class="text-5xl font-black text-white mb-2">4</p>
+                  <p class="text-sm text-slate-400 font-medium">Active Markets</p>
+                </div>
+                <div>
+                  <p class="text-5xl font-black text-white mb-2">99%</p>
+                  <p class="text-sm text-slate-400 font-medium">Client Satisfaction</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-24 bg-slate-50 border-y border-slate-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-20">
+          <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Our Values</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4 leading-tight">What We Stand For</h2>
+          <p class="text-slate-500 text-lg mt-6">The principles that guide every decision we make and every engagement we deliver.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Value 1: Innovation -->
+          <div class="group p-8 bg-white rounded-3xl transition-all hover:shadow-2xl border border-slate-100 text-center">
+            <div class="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center text-teal-600 mx-auto mb-6 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+              <i data-lucide="lightbulb" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Innovation</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              We push boundaries and challenge conventions. Innovation is not just what we deliver &mdash; it's how we think, plan, and execute every day.
+            </p>
+          </div>
+
+          <!-- Value 2: Collaboration -->
+          <div class="group p-8 bg-white rounded-3xl transition-all hover:shadow-2xl border border-slate-100 text-center">
+            <div class="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center text-teal-600 mx-auto mb-6 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+              <i data-lucide="users" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Collaboration</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              We work alongside your teams, not in isolation. True transformation happens when everyone is aligned and working toward a shared vision.
+            </p>
+          </div>
+
+          <!-- Value 3: Impact -->
+          <div class="group p-8 bg-white rounded-3xl transition-all hover:shadow-2xl border border-slate-100 text-center">
+            <div class="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center text-teal-600 mx-auto mb-6 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+              <i data-lucide="trending-up" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Impact</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              We measure success by business outcomes, not billable hours. Every initiative must demonstrably move the needle for your organisation.
+            </p>
+          </div>
+
+          <!-- Value 4: Trust -->
+          <div class="group p-8 bg-white rounded-3xl transition-all hover:shadow-2xl border border-slate-100 text-center">
+            <div class="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center text-teal-600 mx-auto mb-6 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+              <i data-lucide="shield-check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Trust</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              Transparency, integrity, and accountability are non-negotiable. We build long-term partnerships founded on trust and honest communication.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who We Work With -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-20">
+          <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Our Clients</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4 leading-tight">Who We Work With</h2>
+          <p class="text-slate-500 text-lg mt-6">Whether you're beginning your Workday journey or looking to optimise an existing platform, we have the expertise to help.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <!-- New Workday Customers -->
+          <div class="relative group p-10 md:p-12 rounded-[2.5rem] bg-slate-900 text-white overflow-hidden shadow-2xl transition-all hover:translate-y-[-4px]">
+            <div class="relative z-10">
+              <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-8">
+                <i data-lucide="rocket" class="w-7 h-7 text-teal-400"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">New Workday Customers</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Starting your Workday journey? We provide end-to-end deployment architecture, integration design, and change management to ensure your implementation delivers value from day one.
+              </p>
+              <ul class="space-y-3 text-sm font-medium text-slate-300">
+                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Deployment Architecture</li>
+                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Integration Design</li>
+                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Change Management</li>
+              </ul>
+            </div>
+            <i data-lucide="rocket" class="absolute -bottom-10 -right-10 w-48 h-48 text-white/5 rotate-[-15deg]"></i>
+          </div>
+
+          <!-- Current Workday Customers -->
+          <div class="relative group p-10 md:p-12 rounded-[2.5rem] bg-teal-600 text-white overflow-hidden shadow-2xl transition-all hover:translate-y-[-4px]">
+            <div class="relative z-10">
+              <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-8">
+                <i data-lucide="settings" class="w-7 h-7 text-white"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Current Workday Customers</h3>
+              <p class="text-teal-50 text-sm leading-relaxed mb-6">
+                Already on Workday? We help you unlock untapped potential through tenant optimisation, AI-enhanced functionality, and advanced integration architecture that scales with your operations.
+              </p>
+              <ul class="space-y-3 text-sm font-medium">
+                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-white"></i> Tenant Optimisation</li>
+                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-white"></i> AI-Enhanced Functionality</li>
+                <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-white"></i> Advanced Integrations</li>
+              </ul>
+            </div>
+            <i data-lucide="settings" class="absolute -bottom-10 -right-10 w-48 h-48 text-white/10 rotate-[-15deg]"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-teal-600 text-white text-center">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-6">Let's Work Together</h2>
+        <p class="text-xl text-teal-50 mb-10 max-w-2xl mx-auto">Ready to reimagine how your organisation operates? Get in touch and let's start the conversation.</p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="contact.html" class="bg-white text-teal-700 px-8 py-4 rounded-xl font-bold hover:bg-slate-100 transition-all shadow-lg">Get in Touch</a>
+          <a href="approach.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-teal-700 transition-all">Our Approach</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/footer.js" data-depth="0"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        if (window.lucide) { lucide.createIcons(); }
+      }, 300);
+    });
+    if (window.lucide) { lucide.createIcons(); }
+  </script>
+</body>
+</html>

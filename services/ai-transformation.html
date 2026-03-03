@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Transformation | Knowdata Consulting - Enterprise AI Strategy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Global container max-width for all pages */
+    .container {
+      max-width: 1400px !important;
+    }
+
+    /* Rule 1: Strictly disable horizontal scrolling */
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Standardized Branding Styles */
+    .text-h1 {
+      font-size: 2.25rem; /* Mobile */
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+    }
+
+    @media (min-width: 768px) { .text-h1 { font-size: 3.5rem; } }
+    @media (min-width: 1024px) { .text-h1 { font-size: 4.25rem; } }
+    @media (min-width: 1280px) { .text-h1 { font-size: 4.75rem; } }
+
+    /* Refined H2: Balanced weight (800) and size (3.5rem) */
+    .text-h2 {
+      font-size: 2rem; /* Mobile */
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+    }
+
+    @media (min-width: 768px) { .text-h2 { font-size: 2.75rem; } }
+    @media (min-width: 1024px) { .text-h2 { font-size: 3.5rem; } }
+
+    .tag--outline {
+      @apply bg-teal-50 border border-teal-100 text-teal-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 inline-block;
+    }
+
+    .tag--dark {
+      @apply bg-white/10 border border-white/20 text-teal-400 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 inline-block;
+    }
+
+    /* Subtle, Light Hero Background */
+    .hero-subtle {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      position: relative;
+    }
+
+    .hero-accent-blur {
+      position: absolute;
+      top: -10%;
+      right: -5%;
+      width: 40%;
+      height: 60%;
+      background: radial-gradient(circle, rgba(20, 184, 166, 0.08) 0%, transparent 70%);
+      filter: blur(60px);
+      z-index: 1;
+    }
+
+    .capability-card {
+      @apply p-8 bg-white border border-slate-100 rounded-[2rem] transition-all hover:shadow-xl hover:translate-y-[-4px];
+    }
+
+    /* Dark Hero */
+    .hero-dark {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+      position: relative;
+    }
+
+    .hero-dark-blur {
+      position: absolute;
+      top: -15%;
+      right: -10%;
+      width: 50%;
+      height: 70%;
+      background: radial-gradient(circle, rgba(20, 184, 166, 0.12) 0%, transparent 70%);
+      filter: blur(80px);
+      z-index: 1;
+    }
+
+    .hero-dark-blur-secondary {
+      position: absolute;
+      bottom: -20%;
+      left: -5%;
+      width: 35%;
+      height: 50%;
+      background: radial-gradient(circle, rgba(20, 184, 166, 0.06) 0%, transparent 70%);
+      filter: blur(60px);
+      z-index: 1;
+    }
+
+    /* Phase card numbering */
+    .phase-number {
+      @apply w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center text-sm font-bold shrink-0;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+  <div id="site-header"></div>
+  <script src="../js/header.js" data-depth="1"></script>
+
+  <main>
+    <!-- Breadcrumbs -->
+    <nav class="container mx-auto px-4 py-6">
+        <ul class="flex items-center text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] gap-2">
+            <li><a href="../index.html" class="hover:text-teal-600 transition-colors">Home</a></li>
+            <li><i data-lucide="chevron-right" class="w-3 h-3"></i></li>
+            <li><a href="../services.html" class="hover:text-teal-600 transition-colors">Services</a></li>
+            <li><i data-lucide="chevron-right" class="w-3 h-3"></i></li>
+            <li class="text-slate-900">AI Transformation</li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section — Dark -->
+    <section class="container mx-auto px-4">
+      <div class="relative rounded-[2.5rem] overflow-hidden hero-dark h-auto min-h-[450px] md:min-h-[550px] flex items-center border border-slate-700/50 shadow-2xl py-20 lg:py-0">
+        <div class="hero-dark-blur"></div>
+        <div class="hero-dark-blur-secondary"></div>
+
+        <!-- Abstract Grid Overlay -->
+        <div class="absolute inset-0 opacity-[0.04] pointer-events-none z-0">
+          <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+              <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.2"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+          </svg>
+        </div>
+
+        <div class="relative z-10 p-8 md:p-16 lg:p-24 w-full text-left">
+          <div class="xl:w-10/12">
+            <span class="tag--dark">Service Pillar 1</span>
+            <h1 class="text-h1 !text-white mb-8">
+              AI <br><span class="italic text-teal-400">Transformation.</span>
+            </h1>
+            <p class="text-lg xl:text-xl font-normal text-slate-400 max-w-3xl leading-relaxed mb-10">
+              We guide organisations through AI transformation that delivers measurable business progression — enterprise-wide implementations that fundamentally improve how your organisation operates, decides, and competes.
+            </p>
+            <a href="../contact.html" class="inline-block bg-teal-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-teal-500 transition-all shadow-lg shadow-teal-900/40">Define Your AI Strategy</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Organisational Progression Through AI -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Why AI Transformation</span>
+            <h2 class="text-h2 mt-4 mb-8">Organisational Progression <br>Through AI.</h2>
+            <div class="h-1 w-16 bg-teal-500 mb-8"></div>
+            <p class="text-slate-500 text-lg leading-relaxed mb-6">
+              AI is the enabler, not the end goal. Every engagement we undertake is measured by the business impact it delivers — not by the sophistication of the technology deployed.
+            </p>
+            <p class="text-slate-500 text-lg leading-relaxed mb-10">
+              We focus on three core outcomes that define genuine organisational progression: improved operational efficiency, enhanced decision-making capability, and sustainable competitive advantage.
+            </p>
+          </div>
+          <div class="space-y-6">
+            <div class="flex items-start gap-5 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+              <div class="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center text-teal-600 shrink-0">
+                <i data-lucide="zap" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-slate-900 mb-2">Improved Efficiency</h4>
+                <p class="text-slate-500 text-sm leading-relaxed">Automate repetitive processes and streamline operations so your teams can focus on high-value strategic work that drives the business forward.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-5 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+              <div class="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center text-teal-600 shrink-0">
+                <i data-lucide="brain" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-slate-900 mb-2">Enhanced Decision-Making</h4>
+                <p class="text-slate-500 text-sm leading-relaxed">Equip leadership with AI-powered insights that transform raw data into confident, evidence-based decisions at every level of the organisation.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-5 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+              <div class="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center text-teal-600 shrink-0">
+                <i data-lucide="trophy" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-slate-900 mb-2">Competitive Advantage</h4>
+                <p class="text-slate-500 text-sm leading-relaxed">Establish market differentiation through intelligent systems that allow your organisation to move faster, adapt quicker, and outperform competitors.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI End-to-End Transformation — 4 Phases -->
+    <section class="py-24 bg-slate-900">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-teal-400 font-bold text-xs uppercase tracking-widest">Our Process</span>
+          <h2 class="text-h2 !text-white mt-4">AI End-to-End <br>Transformation.</h2>
+          <p class="text-slate-400 text-lg mt-6 leading-relaxed">A structured, phased approach that takes your organisation from AI readiness assessment through to sustained, optimised value delivery.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Phase 1 -->
+          <div class="p-8 bg-white/5 border border-white/10 rounded-[2rem] hover:bg-white/[0.08] transition-all group">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="phase-number">1</div>
+              <span class="text-teal-400 font-bold text-xs uppercase tracking-widest">Phase One</span>
+            </div>
+            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-teal-400 mb-6">
+              <i data-lucide="compass" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Assessment &amp; Strategy</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Identifying high-impact AI opportunities aligned with business objectives alongside the creation of a new, unambiguous AI strategy that gives your organisation a clear direction and measurable goals.</p>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="p-8 bg-white/5 border border-white/10 rounded-[2rem] hover:bg-white/[0.08] transition-all group">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="phase-number">2</div>
+              <span class="text-teal-400 font-bold text-xs uppercase tracking-widest">Phase Two</span>
+            </div>
+            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-teal-400 mb-6">
+              <i data-lucide="puzzle" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Integration</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Seamlessly embedding AI into existing enterprise systems — ensuring new capabilities work in harmony with your current technology stack, workflows, and data architecture without disruption.</p>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="p-8 bg-white/5 border border-white/10 rounded-[2rem] hover:bg-white/[0.08] transition-all group">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="phase-number">3</div>
+              <span class="text-teal-400 font-bold text-xs uppercase tracking-widest">Phase Three</span>
+            </div>
+            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-teal-400 mb-6">
+              <i data-lucide="users" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Change Management</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Ensuring organisational adoption through leadership engagement, structured training programmes, and cultural alignment — because technology only delivers value when people embrace it.</p>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="p-8 bg-white/5 border border-white/10 rounded-[2rem] hover:bg-white/[0.08] transition-all group">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="phase-number">4</div>
+              <span class="text-teal-400 font-bold text-xs uppercase tracking-widest">Phase Four</span>
+            </div>
+            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-teal-400 mb-6">
+              <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Continuous Optimisation</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Monitoring performance, refining implementations, and evolving AI capabilities over time to ensure sustained value delivery and continued alignment with shifting business priorities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Define Your AI Company Strategy -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Strategic Focus</span>
+          <h2 class="text-h2 mt-4">Define Your AI <br>Company Strategy.</h2>
+          <p class="text-slate-500 text-lg mt-6 leading-relaxed">Every organisation requires a tailored AI strategy built on measurable impact, cross-functional collaboration, and intelligent automation that scales.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Card 1: Business Impact -->
+          <div class="capability-card text-center">
+            <div class="w-14 h-14 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mb-6 mx-auto">
+              <i data-lucide="target" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-4">Business Impact</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Every AI initiative must be tied to a measurable business outcome. We define success metrics upfront and engineer solutions that deliver tangible ROI — not proof-of-concept theatre.</p>
+          </div>
+
+          <!-- Card 2: Collaborative Solutions -->
+          <div class="capability-card text-center">
+            <div class="w-14 h-14 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mb-6 mx-auto">
+              <i data-lucide="network" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-4">Collaborative Solutions</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">The mind shift from siloed to collaborative is fundamental. We break down departmental barriers to create AI solutions that serve the entire organisation — not just individual teams.</p>
+          </div>
+
+          <!-- Card 3: Agentic Strategy -->
+          <div class="capability-card text-center">
+            <div class="w-14 h-14 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mb-6 mx-auto">
+              <i data-lucide="bot" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-4">Agentic Strategy</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Autonomous AI agents that execute complex workflows, make contextual decisions, and continuously learn. We design agentic architectures that augment your workforce and scale intelligently.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-slate-50 border-y border-slate-100">
+      <div class="container mx-auto px-4">
+        <div class="relative rounded-[3rem] overflow-hidden bg-slate-900 p-12 md:p-20 text-center shadow-2xl">
+          <!-- Background Blur Accents -->
+          <div class="absolute top-0 right-0 w-1/3 h-1/2 bg-teal-500/10 rounded-full filter blur-[80px]"></div>
+          <div class="absolute bottom-0 left-0 w-1/4 h-1/3 bg-teal-500/5 rounded-full filter blur-[60px]"></div>
+
+          <div class="relative z-10">
+            <span class="text-teal-400 font-bold text-xs uppercase tracking-widest">Get Started</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mt-4 mb-6">Ready to Define Your <br>AI Strategy?</h2>
+            <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+              Let us help you build an AI transformation roadmap that delivers measurable business progression — from strategy through to sustained enterprise-wide value.
+            </p>
+            <a href="../contact.html" class="inline-block bg-teal-600 text-white px-12 py-4 rounded-xl font-bold hover:bg-teal-500 transition-all shadow-lg shadow-teal-900/40 text-lg">Start Your AI Journey</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Services -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <a href="../services.html" class="inline-flex items-center gap-2 text-teal-600 font-bold text-sm uppercase tracking-widest hover:gap-3 transition-all">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          Back to All Services
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../js/footer.js" data-depth="1"></script>
+
+  <script>
+    // Initialize icons after page load
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    });
+
+    // Re-initialize icons after header/footer load (with a small delay)
+    setTimeout(function() {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }, 100);
+  </script>
+</body>
+</html>

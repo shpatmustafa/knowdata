@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Approach | Knowdata</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          container: {
+            center: true,
+            padding: '1rem',
+            screens: {
+              '2xl': '1400px',
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Global container max-width for all pages */
+    .container {
+      max-width: 1400px !important;
+    }
+
+    @media (min-width: 640px) {
+      .container {
+        max-width: 1400px !important;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        max-width: 1400px !important;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .container {
+        max-width: 1400px !important;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .container {
+        max-width: 1400px !important;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .container {
+        max-width: 1400px !important;
+      }
+    }
+
+    /* Rule 1: Strictly disable horizontal scrolling */
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Standardized Branding Styles */
+    .text-h1 {
+      font-size: 2.25rem; /* Mobile */
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    @media (min-width: 768px) { .text-h1 { font-size: 3.5rem; } }
+    @media (min-width: 1024px) { .text-h1 { font-size: 4.25rem; } }
+    @media (min-width: 1280px) { .text-h1 { font-size: 4.75rem; } }
+
+    .text-h2 {
+      @apply text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+  <div id="site-header"></div>
+  <script src="js/header.js" data-depth="0"></script>
+
+  <main>
+    <!-- Breadcrumbs -->
+    <nav class="container mx-auto px-4 py-6">
+      <ul class="flex items-center text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] gap-2">
+        <li><a href="index.html" class="hover:text-teal-600 transition-colors">Home</a></li>
+        <li><i data-lucide="chevron-right" class="w-3 h-3"></i></li>
+        <li class="text-slate-900">Our Approach</li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4">
+      <div class="relative rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 min-h-[500px] md:min-h-[600px] flex items-center shadow-2xl py-20 lg:py-0">
+        <!-- Decorative blur -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-teal-600/20 to-transparent"></div>
+        <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 p-8 md:p-16 lg:p-24 w-full">
+          <div class="xl:w-11/12">
+            <div class="flex items-center gap-3 mb-8">
+              <span class="bg-white/10 backdrop-blur-md text-teal-400 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">How We Work</span>
+            </div>
+            <h1 class="text-h1 text-white mb-8">
+              Our <span class="italic text-teal-400">Approach.</span>
+            </h1>
+            <p class="text-lg xl:text-xl font-normal text-slate-300 max-w-3xl leading-relaxed mb-10">
+              We reimagine, not rebuild. Our methodology ensures every engagement delivers measurable business progression through collaborative, enterprise-wide solutions.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="contact.html" class="bg-teal-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-teal-500 transition-all shadow-lg shadow-teal-900/20">Get Started</a>
+              <a href="services.html" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all">Explore Services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology Section: 4 Steps -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-20">
+          <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Our Methodology</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4 leading-tight">Four Steps to Transformation</h2>
+          <p class="text-slate-500 text-lg mt-6">A proven, repeatable framework that turns complexity into clarity and strategy into measurable outcomes.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Step 01: Understand -->
+          <div class="group p-10 bg-white rounded-[2.5rem] transition-all hover:shadow-2xl border border-slate-100 relative overflow-hidden flex flex-col h-full">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="text-5xl font-black text-teal-100 group-hover:text-teal-200 transition-colors">01</span>
+              <div class="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+                <i data-lucide="search" class="w-7 h-7"></i>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-4">Understand</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">
+              Deep discovery to understand your current landscape, pain points, and strategic objectives. We map existing processes, identify inefficiencies, and uncover the real opportunities hidden within your organisation's operations.
+            </p>
+            <div class="mt-auto p-4 bg-slate-50 rounded-xl border border-slate-100">
+              <p class="text-xs font-bold text-slate-900 uppercase tracking-widest flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-teal-500"></i>
+                Discovery workshops, stakeholder interviews, process mapping
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 02: Strategise -->
+          <div class="group p-10 bg-white rounded-[2.5rem] transition-all hover:shadow-2xl border border-slate-100 relative overflow-hidden flex flex-col h-full">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="text-5xl font-black text-teal-100 group-hover:text-teal-200 transition-colors">02</span>
+              <div class="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+                <i data-lucide="target" class="w-7 h-7"></i>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-4">Strategise</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">
+              Align technology strategy with business goals. We build a comprehensive roadmap that prioritises quick wins alongside long-term transformation, ensuring every initiative maps directly to measurable business outcomes.
+            </p>
+            <div class="mt-auto p-4 bg-slate-50 rounded-xl border border-slate-100">
+              <p class="text-xs font-bold text-slate-900 uppercase tracking-widest flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-teal-500"></i>
+                Roadmap design, KPI definition, strategy alignment
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 03: Implement -->
+          <div class="group p-10 bg-white rounded-[2.5rem] transition-all hover:shadow-2xl border border-slate-100 relative overflow-hidden flex flex-col h-full">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="text-5xl font-black text-teal-100 group-hover:text-teal-200 transition-colors">03</span>
+              <div class="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+                <i data-lucide="rocket" class="w-7 h-7"></i>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-4">Implement</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">
+              Seamless embedding of solutions into your organisation. Our senior-led delivery teams work alongside your people, ensuring knowledge transfer and adoption happen naturally rather than as an afterthought.
+            </p>
+            <div class="mt-auto p-4 bg-slate-50 rounded-xl border border-slate-100">
+              <p class="text-xs font-bold text-slate-900 uppercase tracking-widest flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-teal-500"></i>
+                Agile delivery, change management, embedded teams
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 04: Optimise -->
+          <div class="group p-10 bg-white rounded-[2.5rem] transition-all hover:shadow-2xl border border-slate-100 relative overflow-hidden flex flex-col h-full">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="text-5xl font-black text-teal-100 group-hover:text-teal-200 transition-colors">04</span>
+              <div class="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+                <i data-lucide="trending-up" class="w-7 h-7"></i>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-4">Optimise</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">
+              Continuous monitoring and refinement to maximise ROI. We don't walk away after go-live. Our optimisation phase ensures solutions evolve with your business, delivering compounding value over time.
+            </p>
+            <div class="mt-auto p-4 bg-slate-50 rounded-xl border border-slate-100">
+              <p class="text-xs font-bold text-slate-900 uppercase tracking-widest flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-teal-500"></i>
+                Performance tracking, iterative improvement, ROI reporting
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="py-24 bg-slate-50 border-y border-slate-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-20">
+          <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Our Philosophy</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4 leading-tight">What Sets Us Apart</h2>
+          <p class="text-slate-500 text-lg mt-6">Three core principles that guide every engagement and define how we deliver value.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Philosophy 1 -->
+          <div class="group p-10 bg-white rounded-3xl transition-all hover:shadow-2xl border border-slate-100 relative overflow-hidden">
+            <div class="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-teal-600 mb-8 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+              <i data-lucide="lightbulb" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-4">Reimagine, Don't Rebuild</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              We don't build on broken processes. Instead, we challenge the status quo and reimagine how work gets done. True transformation comes from rethinking, not replicating legacy approaches with new technology.
+            </p>
+          </div>
+
+          <!-- Philosophy 2 -->
+          <div class="group p-10 bg-white rounded-3xl transition-all hover:shadow-2xl border border-slate-100 relative overflow-hidden">
+            <div class="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-teal-600 mb-8 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+              <i data-lucide="users" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-4">Collaborative, Not Siloed</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              We design solutions that break down barriers between teams. By creating collaborative, enterprise-wide solutions, we ensure that every department benefits and contributes to organisational progression.
+            </p>
+          </div>
+
+          <!-- Philosophy 3 -->
+          <div class="group p-10 bg-white rounded-3xl transition-all hover:shadow-2xl border border-slate-100 relative overflow-hidden">
+            <div class="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-teal-600 mb-8 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+              <i data-lucide="bar-chart-3" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-4">Measured by Impact</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              Every engagement is measured by the business impact it delivers, not the hours logged. We define success criteria upfront and hold ourselves accountable to outcomes that move the needle for your organisation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-teal-600 text-white text-center">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-6">Ready to Get Started?</h2>
+        <p class="text-xl text-teal-50 mb-10 max-w-2xl mx-auto">Let's discuss how our approach can drive measurable progression for your organisation.</p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="contact.html" class="bg-white text-teal-700 px-8 py-4 rounded-xl font-bold hover:bg-slate-100 transition-all shadow-lg">Get in Touch</a>
+          <a href="services.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-teal-700 transition-all">Explore Services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/footer.js" data-depth="0"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        if (window.lucide) { lucide.createIcons(); }
+      }, 300);
+    });
+    if (window.lucide) { lucide.createIcons(); }
+  </script>
+</body>
+</html>

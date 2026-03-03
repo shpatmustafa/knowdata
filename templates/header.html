@@ -4,18 +4,18 @@
   .container {
     max-width: 1400px !important;
   }
-  
+
   /* Dropdown hover fix - bridge the gap and keep dropdown visible when hovering over it */
   .dropdown-group:hover .dropdown-menu {
     opacity: 1 !important;
     visibility: visible !important;
   }
-  
+
   .dropdown-menu:hover {
     opacity: 1 !important;
     visibility: visible !important;
   }
-  
+
   /* Bridge the gap between trigger and dropdown */
   .dropdown-menu::before {
     content: '';
@@ -39,27 +39,15 @@
         <a href="{base}services.html" data-nav="services" class="hover:text-teal-600 transition-colors flex items-center gap-1 cursor-pointer py-2">
           Services <i data-lucide="chevron-down" class="w-4 h-4"></i>
         </a>
-        <div class="dropdown-menu absolute top-full left-0 mt-1 w-64 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+        <div class="dropdown-menu absolute top-full left-0 mt-1 w-72 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
           <div class="bg-white rounded-xl shadow-2xl border border-slate-100 py-2 relative">
-          <a href="{base}services/project-management.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition-colors">
-            <i data-lucide="git-branch" class="w-5 h-5 text-teal-600"></i>
-            <span>Project Management</span>
+          <a href="{base}services/ai-transformation.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition-colors">
+            <i data-lucide="brain" class="w-5 h-5 text-teal-600"></i>
+            <span>AI Transformation</span>
           </a>
-          <a href="{base}services/business-analysis.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition-colors">
-            <i data-lucide="trending-up" class="w-5 h-5 text-teal-600"></i>
-            <span>Business Analysis</span>
-          </a>
-          <a href="{base}services/solutions-architecture.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition-colors">
+          <a href="{base}services/workday-architecture.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition-colors">
             <i data-lucide="settings" class="w-5 h-5 text-teal-600"></i>
-            <span>Solutions Architecture</span>
-          </a>
-          <a href="{base}services/workday-hris.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition-colors">
-            <i data-lucide="users" class="w-5 h-5 text-teal-600"></i>
-            <span>Workday HRIS</span>
-          </a>
-          <a href="{base}services/microsoft-dynamics.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition-colors">
-            <i data-lucide="layout" class="w-5 h-5 text-teal-600"></i>
-            <span>Microsoft Dynamics</span>
+            <span>Workday Solution Architecture</span>
           </a>
           <div class="border-t border-slate-100 my-1"></div>
           <a href="{base}services.html" class="flex items-center gap-3 px-4 py-3 hover:bg-teal-50 text-teal-600 font-semibold transition-colors">
@@ -70,48 +58,9 @@
         </div>
       </div>
 
-      <!-- Industries Dropdown -->
-      <div class="relative group dropdown-group">
-        <a href="{base}industries.html" data-nav="industries" class="hover:text-teal-600 transition-colors flex items-center gap-1 cursor-pointer py-2">
-          Industries <i data-lucide="chevron-down" class="w-4 h-4"></i>
-        </a>
-        <div class="dropdown-menu absolute top-full left-0 mt-1 w-64 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-          <div class="bg-white rounded-xl shadow-2xl border border-slate-100 py-2 relative">
-          <a href="{base}Industries/renewable-energy.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition-colors">
-            <i data-lucide="zap" class="w-5 h-5 text-teal-600"></i>
-            <span>Energy & Utilities</span>
-          </a>
-          <a href="{base}Industries/healthcare.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition-colors">
-            <i data-lucide="heart-pulse" class="w-5 h-5 text-teal-600"></i>
-            <span>Healthcare & Life Sciences</span>
-          </a>
-          <a href="{base}Industries/technology.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition-colors">
-            <i data-lucide="cpu" class="w-5 h-5 text-teal-600"></i>
-            <span>Technology & Electronics</span>
-          </a>
-          <a href="{base}Industries/telecommunication.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition-colors">
-            <i data-lucide="radio" class="w-5 h-5 text-teal-600"></i>
-            <span>Telecommunications</span>
-          </a>
-          <a href="{base}Industries/pharma.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition-colors">
-            <i data-lucide="pill" class="w-5 h-5 text-teal-600"></i>
-            <span>Pharma</span>
-          </a>
-          <a href="{base}Industries/medtech.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition-colors">
-            <i data-lucide="activity" class="w-5 h-5 text-teal-600"></i>
-            <span>Medtech</span>
-          </a>
-          <div class="border-t border-slate-100 my-1"></div>
-          <a href="{base}industries.html" class="flex items-center gap-3 px-4 py-3 hover:bg-teal-50 text-teal-600 font-semibold transition-colors">
-            <i data-lucide="arrow-right" class="w-5 h-5"></i>
-            <span>View All Industries</span>
-          </a>
-          </div>
-        </div>
-      </div>
-
-      <a href="{base}case-studies.html" data-nav="case-studies" class="hover:text-teal-600 transition-colors">Case Studies</a>
-      <a href="{base}methodology.html" data-nav="methodology" class="hover:text-teal-600 transition-colors">Methodology</a>
+      <a href="{base}approach.html" data-nav="approach" class="hover:text-teal-600 transition-colors">Approach</a>
+      <a href="{base}about.html" data-nav="about" class="hover:text-teal-600 transition-colors">About</a>
+      <a href="{base}insights.html" data-nav="insights" class="hover:text-teal-600 transition-colors">Insights</a>
       <a href="{base}contact.html" class="bg-teal-600 text-white px-5 py-2.5 rounded-full hover:bg-teal-700 transition-all shadow-md shadow-teal-600/20 font-bold relative z-50">Contact Us</a>
     </nav>
 
@@ -128,62 +77,19 @@
         <i data-lucide="chevron-down" class="w-4 h-4"></i>
       </a>
       <div class="pl-4 space-y-2 mt-2 hidden">
-        <a href="{base}services/project-management.html" class="flex items-center gap-2 text-xs text-slate-500 hover:text-teal-600 py-1">
-          <i data-lucide="git-branch" class="w-4 h-4"></i>
-          <span>Project Management</span>
+        <a href="{base}services/ai-transformation.html" class="flex items-center gap-2 text-xs text-slate-500 hover:text-teal-600 py-1">
+          <i data-lucide="brain" class="w-4 h-4"></i>
+          <span>AI Transformation</span>
         </a>
-        <a href="{base}services/business-analysis.html" class="flex items-center gap-2 text-xs text-slate-500 hover:text-teal-600 py-1">
-          <i data-lucide="trending-up" class="w-4 h-4"></i>
-          <span>Business Analysis</span>
-        </a>
-        <a href="{base}services/solutions-architecture.html" class="flex items-center gap-2 text-xs text-slate-500 hover:text-teal-600 py-1">
+        <a href="{base}services/workday-architecture.html" class="flex items-center gap-2 text-xs text-slate-500 hover:text-teal-600 py-1">
           <i data-lucide="settings" class="w-4 h-4"></i>
-          <span>Solutions Architecture</span>
-        </a>
-        <a href="{base}services/workday-hris.html" class="flex items-center gap-2 text-xs text-slate-500 hover:text-teal-600 py-1">
-          <i data-lucide="users" class="w-4 h-4"></i>
-          <span>Workday HRIS</span>
-        </a>
-        <a href="{base}services/microsoft-dynamics.html" class="flex items-center gap-2 text-xs text-slate-500 hover:text-teal-600 py-1">
-          <i data-lucide="layout" class="w-4 h-4"></i>
-          <span>Microsoft Dynamics</span>
+          <span>Workday Solution Architecture</span>
         </a>
       </div>
     </div>
-    <div>
-      <a href="{base}industries.html" data-nav="industries" class="block text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors py-2 flex items-center justify-between">
-        <span>Industries</span>
-        <i data-lucide="chevron-down" class="w-4 h-4"></i>
-      </a>
-      <div class="pl-4 space-y-2 mt-2 hidden">
-        <a href="{base}Industries/renewable-energy.html" class="flex items-center gap-2 text-xs text-slate-500 hover:text-teal-600 py-1">
-          <i data-lucide="zap" class="w-4 h-4"></i>
-          <span>Energy & Utilities</span>
-        </a>
-        <a href="{base}Industries/healthcare.html" class="flex items-center gap-2 text-xs text-slate-500 hover:text-teal-600 py-1">
-          <i data-lucide="heart-pulse" class="w-4 h-4"></i>
-          <span>Healthcare & Life Sciences</span>
-        </a>
-        <a href="{base}Industries/technology.html" class="flex items-center gap-2 text-xs text-slate-500 hover:text-teal-600 py-1">
-          <i data-lucide="cpu" class="w-4 h-4"></i>
-          <span>Technology & Electronics</span>
-        </a>
-        <a href="{base}Industries/telecommunication.html" class="flex items-center gap-2 text-xs text-slate-500 hover:text-teal-600 py-1">
-          <i data-lucide="radio" class="w-4 h-4"></i>
-          <span>Telecommunications</span>
-        </a>
-        <a href="{base}Industries/pharma.html" class="flex items-center gap-2 text-xs text-slate-500 hover:text-teal-600 py-1">
-          <i data-lucide="pill" class="w-4 h-4"></i>
-          <span>Pharma</span>
-        </a>
-        <a href="{base}Industries/medtech.html" class="flex items-center gap-2 text-xs text-slate-500 hover:text-teal-600 py-1">
-          <i data-lucide="activity" class="w-4 h-4"></i>
-          <span>Medtech</span>
-        </a>
-      </div>
-    </div>
-    <a href="{base}case-studies.html" data-nav="case-studies" class="block text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors py-2">Case Studies</a>
-    <a href="{base}methodology.html" data-nav="methodology" class="block text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors py-2">Methodology</a>
+    <a href="{base}approach.html" data-nav="approach" class="block text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors py-2">Approach</a>
+    <a href="{base}about.html" data-nav="about" class="block text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors py-2">About</a>
+    <a href="{base}insights.html" data-nav="insights" class="block text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors py-2">Insights</a>
     <a href="{base}contact.html" class="block text-center bg-teal-600 text-white px-5 py-2.5 rounded-full hover:bg-teal-700 transition-all font-bold">Contact Us</a>
   </div>
 </header>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workday Solution Architecture | Knowdata Consulting - Scalable HCM Design</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Global container max-width for all pages */
+    .container {
+      max-width: 1400px !important;
+    }
+
+    /* Rule 1: Strictly disable horizontal scrolling */
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Standardized Branding Styles */
+    .text-h1 {
+      font-size: 2.25rem; /* Mobile */
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+    }
+
+    @media (min-width: 768px) { .text-h1 { font-size: 3.5rem; } }
+    @media (min-width: 1024px) { .text-h1 { font-size: 4.25rem; } }
+    @media (min-width: 1280px) { .text-h1 { font-size: 4.75rem; } }
+
+    /* Refined H2: Balanced weight (800) and size (3.5rem) */
+    .text-h2 {
+      font-size: 2rem; /* Mobile */
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+    }
+
+    @media (min-width: 768px) { .text-h2 { font-size: 2.75rem; } }
+    @media (min-width: 1024px) { .text-h2 { font-size: 3.5rem; } }
+
+    .tag--outline {
+      @apply bg-teal-50 border border-teal-100 text-teal-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 inline-block;
+    }
+
+    /* Dark Hero Background */
+    .hero-dark {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+      position: relative;
+    }
+
+    .hero-dark .hero-accent-blur {
+      position: absolute;
+      top: -10%;
+      right: -5%;
+      width: 40%;
+      height: 60%;
+      background: radial-gradient(circle, rgba(20, 184, 166, 0.12) 0%, transparent 70%);
+      filter: blur(60px);
+      z-index: 1;
+    }
+
+    .hero-dark .hero-accent-blur-secondary {
+      position: absolute;
+      bottom: -15%;
+      left: 10%;
+      width: 30%;
+      height: 50%;
+      background: radial-gradient(circle, rgba(20, 184, 166, 0.06) 0%, transparent 70%);
+      filter: blur(80px);
+      z-index: 1;
+    }
+
+    .tag--dark {
+      @apply bg-teal-600/10 border border-teal-500/20 text-teal-400 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 inline-block;
+    }
+
+    .capability-card {
+      @apply p-8 bg-white border border-slate-100 rounded-[2rem] transition-all hover:shadow-xl hover:translate-y-[-4px];
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+  <div id="site-header"></div>
+  <script src="../js/header.js" data-depth="1"></script>
+
+  <main>
+    <!-- Breadcrumbs -->
+    <nav class="container mx-auto px-4 py-6">
+        <ul class="flex items-center text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] gap-2">
+            <li><a href="../index.html" class="hover:text-teal-600 transition-colors">Home</a></li>
+            <li><i data-lucide="chevron-right" class="w-3 h-3"></i></li>
+            <li><a href="../services.html" class="hover:text-teal-600 transition-colors">Services</a></li>
+            <li><i data-lucide="chevron-right" class="w-3 h-3"></i></li>
+            <li class="text-slate-900">Workday Solution Architecture</li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section — Dark -->
+    <section class="container mx-auto px-4">
+      <div class="relative rounded-[2.5rem] overflow-hidden hero-dark h-auto min-h-[450px] md:min-h-[550px] flex items-center shadow-2xl py-20 lg:py-0">
+        <div class="hero-accent-blur"></div>
+        <div class="hero-accent-blur-secondary"></div>
+
+        <!-- Abstract Grid Overlay -->
+        <div class="absolute inset-0 opacity-[0.04] pointer-events-none z-0">
+          <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+              <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.2"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+          </svg>
+        </div>
+
+        <div class="relative z-10 p-8 md:p-16 lg:p-24 w-full text-left">
+          <div class="xl:w-10/12">
+            <span class="tag--dark">Service Pillar 2</span>
+            <h1 class="text-h1 !text-white mb-8">
+              Workday Solution <br><span class="italic text-teal-400">Architecture.</span>
+            </h1>
+            <p class="text-lg xl:text-xl font-normal text-slate-400 max-w-3xl leading-relaxed mb-10">
+              We architect Workday technical and functional solutions that scale with your business. Delivering robust, secure, and efficient HCM implementations that support your long-term strategic vision while optimising day-one operations.
+            </p>
+            <a href="../contact.html" class="inline-block bg-teal-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-teal-500 transition-all shadow-lg shadow-teal-900/40">Architect Your Solution</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid — 7 Cards -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="mb-16">
+          <h2 class="text-h2">Architecture Services.</h2>
+          <div class="h-1 w-16 bg-teal-500 mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1: Initial Deployment Architecture -->
+          <div class="capability-card">
+            <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-teal-600 mb-6"><i data-lucide="rocket"></i></div>
+            <h4 class="text-xl font-bold mb-3">Initial Deployment Architecture</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Designing secure, scalable Workday implementations from the ground up. We define your tenant strategy, data model, and foundational configuration to ensure a robust launch.</p>
+          </div>
+
+          <!-- Card 2: Tenant Optimisation -->
+          <div class="capability-card">
+            <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-teal-600 mb-6"><i data-lucide="gauge"></i></div>
+            <h4 class="text-xl font-bold mb-3">Tenant Optimisation</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Auditing and improving existing Workday configurations for performance and efficiency. We identify bottlenecks, streamline processes, and ensure your tenant operates at peak capability.</p>
+          </div>
+
+          <!-- Card 3: Integration Architecture -->
+          <div class="capability-card">
+            <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-teal-600 mb-6"><i data-lucide="network"></i></div>
+            <h4 class="text-xl font-bold mb-3">Integration Architecture</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Designing and implementing robust integrations with third-party applications. From EIBs to Workday Studio, we build seamless data flows across your entire technology ecosystem.</p>
+          </div>
+
+          <!-- Card 4: Security & Compliance -->
+          <div class="capability-card">
+            <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-teal-600 mb-6"><i data-lucide="shield-check"></i></div>
+            <h4 class="text-xl font-bold mb-3">Security & Compliance</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Establishing security models and ensuring regulatory compliance. We architect role-based access, configure domain security policies, and align your tenant with GDPR, SOX, and industry standards.</p>
+          </div>
+
+          <!-- Card 5: Business Process Design -->
+          <div class="capability-card">
+            <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-teal-600 mb-6"><i data-lucide="git-branch"></i></div>
+            <h4 class="text-xl font-bold mb-3">Business Process Design</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Mapping workflows and optimising business processes within Workday. We design approval chains, condition rules, and automated steps that mirror your operational reality.</p>
+          </div>
+
+          <!-- Card 6: Reporting & Analytics -->
+          <div class="capability-card">
+            <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-teal-600 mb-6"><i data-lucide="bar-chart-3"></i></div>
+            <h4 class="text-xl font-bold mb-3">Reporting & Analytics</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Creating data structures and reporting frameworks for actionable insights. We build composite reports, calculated fields, and dashboards that empower data-driven workforce decisions.</p>
+          </div>
+
+          <!-- Card 7: AI-Enhanced Workday -->
+          <div class="capability-card">
+            <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-teal-600 mb-6"><i data-lucide="brain-circuit"></i></div>
+            <h4 class="text-xl font-bold mb-3">AI-Enhanced Workday</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Integrating AI capabilities to extend Workday's native functionality. From intelligent document processing to predictive analytics, we embed machine learning into your HCM workflows.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical & Functional Excellence -->
+    <section class="py-24 bg-slate-50 border-y border-slate-100">
+      <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Why Knowdata</span>
+            <h2 class="text-h2 mb-10">Technical & Functional Excellence.</h2>
+            <ul class="space-y-6">
+              <li class="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
+                <i data-lucide="check-circle" class="text-teal-600 shrink-0"></i>
+                <span class="font-semibold text-slate-800">Deep expertise across both technical and functional Workday domains</span>
+              </li>
+              <li class="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
+                <i data-lucide="check-circle" class="text-teal-600 shrink-0"></i>
+                <span class="font-semibold text-slate-800">Architectures designed for scalability, security, and long-term viability</span>
+              </li>
+              <li class="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
+                <i data-lucide="check-circle" class="text-teal-600 shrink-0"></i>
+                <span class="font-semibold text-slate-800">Reduced implementation risk through proven design patterns and best practices</span>
+              </li>
+              <li class="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
+                <i data-lucide="check-circle" class="text-teal-600 shrink-0"></i>
+                <span class="font-semibold text-slate-800">Optimised day-one operations that accelerate time-to-value</span>
+              </li>
+              <li class="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
+                <i data-lucide="check-circle" class="text-teal-600 shrink-0"></i>
+                <span class="font-semibold text-slate-800">Seamless integration ecosystems connecting Workday to your full tech stack</span>
+              </li>
+              <li class="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
+                <i data-lucide="check-circle" class="text-teal-600 shrink-0"></i>
+                <span class="font-semibold text-slate-800">AI-forward approach that future-proofs your HCM investment</span>
+              </li>
+            </ul>
+          </div>
+          <div class="relative rounded-[3rem] overflow-hidden shadow-2xl h-[500px]">
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1000" alt="Workday Solution Architecture" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-white border-t border-slate-100">
+      <div class="container mx-auto px-4">
+        <div class="rounded-[3rem] bg-slate-900 p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
+          <!-- Decorative blurs -->
+          <div class="absolute top-0 right-0 w-96 h-96 bg-teal-500/10 rounded-full filter blur-[100px]"></div>
+          <div class="absolute bottom-0 left-0 w-64 h-64 bg-teal-500/5 rounded-full filter blur-[80px]"></div>
+
+          <div class="relative z-10">
+            <span class="tag--dark">Let's Talk</span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">Ready to Optimise Your <br class="hidden md:block">Workday Environment?</h2>
+            <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+              Whether you are planning a new Workday deployment or looking to optimise your current tenant, our solution architects bring the technical depth and functional expertise to deliver measurable results.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="../contact.html" class="inline-block bg-teal-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-teal-500 transition-all shadow-lg shadow-teal-900/40">Start the Conversation</a>
+              <a href="../services.html" class="inline-block bg-white/10 text-white border border-white/20 px-10 py-4 rounded-xl font-bold hover:bg-white/20 transition-all">Explore All Services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Services -->
+    <section class="pb-16 pt-8">
+      <div class="container mx-auto px-4">
+        <a href="../services.html" class="inline-flex items-center gap-2 text-sm font-semibold text-teal-600 hover:text-teal-700 transition-colors group">
+          <i data-lucide="arrow-left" class="w-4 h-4 group-hover:-translate-x-1 transition-transform"></i>
+          Back to All Services
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../js/footer.js" data-depth="1"></script>
+
+  <script>
+    // Initialize icons after page load
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    });
+
+    // Re-initialize icons after header/footer load (with a small delay)
+    setTimeout(function() {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }, 100);
+  </script>
+</body>
+</html>
