@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner Enquiries | Knowdata Consulting</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          container: {
+            center: true,
+            padding: '1rem',
+            screens: {
+              '2xl': '1400px',
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Global container max-width for all pages */
+    .container {
+      max-width: 1400px !important;
+    }
+
+    @media (min-width: 640px) {
+      .container {
+        max-width: 1400px !important;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        max-width: 1400px !important;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .container {
+        max-width: 1400px !important;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .container {
+        max-width: 1400px !important;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .container {
+        max-width: 1400px !important;
+      }
+    }
+
+    /* Rule 1: Strictly disable horizontal scrolling */
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Standardized Branding Styles */
+    .text-h1 {
+      font-size: 2.25rem; /* Mobile */
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+    }
+
+    @media (min-width: 768px) { .text-h1 { font-size: 3.5rem; } }
+    @media (min-width: 1024px) { .text-h1 { font-size: 4.25rem; } }
+    @media (min-width: 1280px) { .text-h1 { font-size: 4.75rem; } }
+
+    .text-h2 {
+      font-size: 1.875rem;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.1;
+    }
+
+    @media (min-width: 768px) { .text-h2 { font-size: 2.25rem; } }
+    @media (min-width: 1024px) { .text-h2 { font-size: 3rem; } }
+
+    /* Subtle, Light Hero Background */
+    .hero-subtle {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      position: relative;
+    }
+
+    .hero-accent-blur {
+      position: absolute;
+      top: -10%;
+      right: -5%;
+      width: 40%;
+      height: 60%;
+      background: radial-gradient(circle, rgba(20, 184, 166, 0.08) 0%, transparent 70%);
+      filter: blur(60px);
+      z-index: 1;
+    }
+
+    /* Form Styling */
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background-color: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 0.75rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem;
+      color: #0f172a;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+      border-color: #14b8a6;
+      box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.15);
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: #94a3b8;
+    }
+
+    .form-textarea {
+      resize: none;
+    }
+
+    /* Partner type card selection */
+    .partner-card:has(input:checked) {
+      border-color: #14b8a6;
+      background: #f0fdfa;
+    }
+    .partner-card:has(input:checked) .card-icon {
+      color: #0d9488;
+    }
+    .partner-card:has(input:checked) .card-check {
+      border-color: #0d9488;
+      background: #0d9488;
+    }
+    .partner-card:has(input:checked) .card-check i {
+      opacity: 1;
+    }
+
+    .fade-in { animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+  <div id="site-header"></div>
+  <script src="js/header.js" data-depth="0"></script>
+
+  <main>
+    <!-- Breadcrumbs -->
+    <nav class="container mx-auto px-4 py-6">
+        <ul class="flex items-center text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] gap-2">
+            <li><a href="index.html" class="hover:text-teal-600 transition-colors">Home</a></li>
+            <li><i data-lucide="chevron-right" class="w-3 h-3"></i></li>
+            <li><a href="partners.html" class="hover:text-teal-600 transition-colors">Partners</a></li>
+            <li><i data-lucide="chevron-right" class="w-3 h-3"></i></li>
+            <li class="text-slate-900">Partner Enquiry</li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4">
+      <div class="relative rounded-[2.5rem] overflow-hidden hero-subtle h-auto min-h-[450px] md:min-h-[550px] flex items-center border border-slate-100 shadow-sm py-20 lg:py-0">
+        <div class="hero-accent-blur"></div>
+
+        <!-- Abstract Grid Overlay -->
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none z-0">
+          <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+              <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="black" stroke-width="0.2"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+          </svg>
+        </div>
+
+        <div class="relative z-10 p-8 md:p-16 lg:p-24 w-full">
+          <div class="xl:w-10/12">
+            <h1 class="text-h1 mb-8">
+              Partner <br><span class="italic text-teal-600">Enquiry.</span>
+            </h1>
+            <p class="text-lg xl:text-xl font-normal text-slate-500 max-w-3xl leading-relaxed mb-10">
+              Interested in collaborating with KnowData? Tell us about your organisation and how we can work together.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner Enquiry Form Section -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <!-- Form -->
+          <div>
+            <div class="mb-10">
+              <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Partnership Enquiry</span>
+              <h2 class="text-h2 mt-4">Tell Us About Your Organisation</h2>
+            </div>
+
+            <form id="partner-form">
+              <!-- Partnership Type -->
+              <div class="mb-8">
+                <label class="block text-sm font-semibold text-slate-700 mb-4">What type of partnership are you interested in?</label>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <label class="partner-card group relative flex flex-col items-center gap-3 p-6 bg-slate-50 border-2 border-slate-100 rounded-2xl cursor-pointer transition-all hover:border-teal-300 hover:bg-teal-50/30">
+                    <input type="radio" name="partner-type" value="legal" class="sr-only">
+                    <div class="card-icon w-12 h-12 bg-white rounded-xl flex items-center justify-center text-slate-400 transition-colors shadow-sm">
+                      <i data-lucide="scale" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-sm font-bold text-slate-700 text-center">Legal</span>
+                    <div class="card-check absolute top-3 right-3 w-5 h-5 rounded-full border-2 border-slate-200 flex items-center justify-center transition-all">
+                      <i data-lucide="check" class="w-3 h-3 text-white opacity-0"></i>
+                    </div>
+                  </label>
+                  <label class="partner-card group relative flex flex-col items-center gap-3 p-6 bg-slate-50 border-2 border-slate-100 rounded-2xl cursor-pointer transition-all hover:border-teal-300 hover:bg-teal-50/30">
+                    <input type="radio" name="partner-type" value="marketing" class="sr-only">
+                    <div class="card-icon w-12 h-12 bg-white rounded-xl flex items-center justify-center text-slate-400 transition-colors shadow-sm">
+                      <i data-lucide="megaphone" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-sm font-bold text-slate-700 text-center">Marketing</span>
+                    <div class="card-check absolute top-3 right-3 w-5 h-5 rounded-full border-2 border-slate-200 flex items-center justify-center transition-all">
+                      <i data-lucide="check" class="w-3 h-3 text-white opacity-0"></i>
+                    </div>
+                  </label>
+                  <label class="partner-card group relative flex flex-col items-center gap-3 p-6 bg-slate-50 border-2 border-slate-100 rounded-2xl cursor-pointer transition-all hover:border-teal-300 hover:bg-teal-50/30">
+                    <input type="radio" name="partner-type" value="finance" class="sr-only">
+                    <div class="card-icon w-12 h-12 bg-white rounded-xl flex items-center justify-center text-slate-400 transition-colors shadow-sm">
+                      <i data-lucide="landmark" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-sm font-bold text-slate-700 text-center">Finance</span>
+                    <div class="card-check absolute top-3 right-3 w-5 h-5 rounded-full border-2 border-slate-200 flex items-center justify-center transition-all">
+                      <i data-lucide="check" class="w-3 h-3 text-white opacity-0"></i>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Contact Details -->
+              <div class="space-y-5 mb-8">
+                <div class="grid md:grid-cols-2 gap-5">
+                  <div>
+                    <label for="contact-name" class="block text-sm font-semibold text-slate-700 mb-2">Contact Name</label>
+                    <input type="text" id="contact-name" name="contact-name" placeholder="Your full name" class="form-input" required>
+                  </div>
+                  <div>
+                    <label for="job-title" class="block text-sm font-semibold text-slate-700 mb-2">Job Title</label>
+                    <input type="text" id="job-title" name="job-title" placeholder="e.g. Managing Director" class="form-input">
+                  </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-5">
+                  <div>
+                    <label for="partner-email" class="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
+                    <input type="email" id="partner-email" name="email" placeholder="you@company.com" class="form-input" required>
+                  </div>
+                  <div>
+                    <label for="phone" class="block text-sm font-semibold text-slate-700 mb-2">Phone Number <span class="text-slate-400 font-normal">(optional)</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="+353 1 234 5678" class="form-input">
+                  </div>
+                </div>
+                <div>
+                  <label for="organisation" class="block text-sm font-semibold text-slate-700 mb-2">Organisation Name</label>
+                  <input type="text" id="organisation" name="organisation" placeholder="Your organisation" class="form-input" required>
+                </div>
+                <div>
+                  <label for="website" class="block text-sm font-semibold text-slate-700 mb-2">Website <span class="text-slate-400 font-normal">(optional)</span></label>
+                  <input type="url" id="website" name="website" placeholder="https://yourcompany.com" class="form-input">
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="mb-8">
+                <label for="partner-message" class="block text-sm font-semibold text-slate-700 mb-2">Tell us about the partnership opportunity</label>
+                <textarea id="partner-message" name="message" rows="6" placeholder="Describe your organisation's expertise, the type of collaboration you're interested in, and how you see us working together..." class="form-textarea" required></textarea>
+              </div>
+
+              <!-- Submit -->
+              <div class="flex justify-end">
+                <button type="submit" class="bg-teal-600 text-white px-8 py-3.5 rounded-xl font-bold hover:bg-teal-500 transition-all shadow-lg shadow-teal-900/20 flex items-center gap-2">
+                  Submit Enquiry <i data-lucide="send" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </form>
+
+            <!-- Success State -->
+            <div id="partner-success" class="hidden fade-in text-center py-16">
+              <div class="w-20 h-20 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="check-circle" class="w-10 h-10 text-teal-600"></i>
+              </div>
+              <h3 class="text-2xl font-extrabold text-slate-900 mb-3">Enquiry Submitted!</h3>
+              <p class="text-slate-500 mb-8 max-w-sm mx-auto">Thank you for your interest in partnering with KnowData. Our partnerships team will be in touch within 48 hours.</p>
+              <button type="button" onclick="resetPartnerForm()" class="text-teal-600 font-bold hover:text-teal-700 transition-colors flex items-center gap-2 mx-auto">
+                <i data-lucide="rotate-ccw" class="w-4 h-4"></i> Submit another enquiry
+              </button>
+            </div>
+          </div>
+
+          <!-- Sidebar Info -->
+          <div>
+            <div class="mb-12">
+              <span class="text-teal-600 font-bold text-xs uppercase tracking-widest">Why Partner With Us</span>
+              <h2 class="text-h2 mt-4">What We Look For</h2>
+            </div>
+
+            <div class="space-y-8">
+              <!-- Shared Values -->
+              <div class="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                <div class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center text-teal-600 shrink-0">
+                  <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-slate-900 mb-1">Shared Values</h3>
+                  <p class="text-slate-500 text-sm">Partners who share our commitment to quality, transparency, and client-first thinking.</p>
+                </div>
+              </div>
+
+              <!-- Specialist Expertise -->
+              <div class="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                <div class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center text-teal-600 shrink-0">
+                  <i data-lucide="award" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-slate-900 mb-1">Specialist Expertise</h3>
+                  <p class="text-slate-500 text-sm">Deep domain knowledge in legal, marketing, finance, or complementary technology disciplines.</p>
+                </div>
+              </div>
+
+              <!-- Proven Track Record -->
+              <div class="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                <div class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center text-teal-600 shrink-0">
+                  <i data-lucide="trending-up" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-slate-900 mb-1">Proven Track Record</h3>
+                  <p class="text-slate-500 text-sm">Demonstrated success working with enterprise clients on complex transformation projects.</p>
+                </div>
+              </div>
+
+              <!-- Collaborative Approach -->
+              <div class="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                <div class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center text-teal-600 shrink-0">
+                  <i data-lucide="users" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-slate-900 mb-1">Collaborative Approach</h3>
+                  <p class="text-slate-500 text-sm">A genuine willingness to work as one team, delivering integrated solutions for our mutual clients.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Alternative -->
+            <div class="mt-12 p-8 bg-slate-900 rounded-2xl text-white">
+              <h3 class="text-xl font-bold mb-4">Prefer to Email?</h3>
+              <p class="text-slate-300 text-sm mb-6">If you'd rather reach out directly, our partnerships team is available via email.</p>
+              <a href="mailto:info@knowdata.ie" class="inline-flex items-center gap-2 text-teal-400 font-bold hover:text-teal-300 transition-colors">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+                info@knowdata.ie
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-slate-900 text-white relative overflow-hidden">
+      <div class="container mx-auto px-4 relative z-10 text-center">
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-8 italic text-teal-400">Explore Our Partnership Model</h2>
+        <p class="text-slate-400 text-lg mb-12 max-w-2xl mx-auto">Learn more about how we collaborate with our partners across legal, marketing, and finance disciplines.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="partners.html" class="bg-teal-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-teal-500 transition-all shadow-lg shadow-teal-900/20">View Our Partners</a>
+          <a href="services.html" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all">Learn About Our Services</a>
+        </div>
+      </div>
+    </section>
+
+    <div id="client-logos"></div>
+    <script src="js/clients.js" data-depth="0"></script>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/footer.js" data-depth="0"></script>
+
+  <script>
+    function resetPartnerForm() {
+      document.getElementById('partner-form').reset();
+      document.getElementById('partner-form').classList.remove('hidden');
+      document.getElementById('partner-success').classList.add('hidden');
+      if (window.lucide) lucide.createIcons();
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.lucide) lucide.createIcons();
+
+      var form = document.getElementById('partner-form');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          form.classList.add('hidden');
+          document.getElementById('partner-success').classList.remove('hidden');
+          if (window.lucide) lucide.createIcons();
+        });
+      }
+    });
+
+    setTimeout(function() { if (window.lucide) lucide.createIcons(); }, 300);
+  </script>
+</body>
+</html>
