@@ -17,7 +17,8 @@
       var path = window.location.pathname.toLowerCase();
       var section = '';
 
-      if (path.indexOf('services') !== -1) section = 'services';
+      if (path.indexOf('case-studies') !== -1) section = 'case-studies';
+      else if (path.indexOf('services') !== -1) section = 'services';
       else if (path.indexOf('approach') !== -1) section = 'approach';
       else if (path.indexOf('about') !== -1) section = 'about';
       else if (path.indexOf('insights') !== -1) section = 'insights';
