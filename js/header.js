@@ -21,6 +21,7 @@
       else if (path.indexOf('services') !== -1) section = 'services';
       else if (path.indexOf('approach') !== -1) section = 'approach';
       else if (path.indexOf('about') !== -1) section = 'about';
+      else if (path.indexOf('partners') !== -1) section = 'partners';
       else if (path.indexOf('insights') !== -1) section = 'insights';
 
       if (section) {
